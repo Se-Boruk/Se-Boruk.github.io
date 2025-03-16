@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>Projects - My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -18,7 +18,7 @@
       </div>
       <div class="nav-right">
         <a href="https://github.com/username" target="_blank" class="icon">
-          <!-- GitHub icon -->
+          <!-- GitHub icon (same as above) -->
           <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true">
             <path fill="#ffffff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
               0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
@@ -30,7 +30,7 @@
           </svg>
         </a>
         <a href="https://www.linkedin.com/in/username" target="_blank" class="icon">
-          <!-- LinkedIn icon -->
+          <!-- LinkedIn icon (same as above) -->
           <svg height="24" width="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.23 0H1.77C.79 0 0 .77 0 1.723V22.27C0 23.223.79 24 1.77 24H22.23C23.21 24 
               24 23.223 24 22.27V1.723C24 .77 23.21 0 22.23 0ZM7.09 20.452H3.56V9H7.09V20.452ZM5.325 
@@ -44,22 +44,43 @@
   </header>
 
   <main>
-    <section id="intro">
-      <h1>Website in Development</h1>
-      <p>Welcome! This portfolio is currently under construction. Stay tuned for updates and exciting projects.</p>
-    </section>
-    
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
-    </section>
+    <div class="projects-container">
+      <aside class="toc">
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="#project1" class="active">Project 1</a></li>
+          <li><a href="#project2">Project 2</a></li>
+          <li><a href="#project3">Project 3</a></li>
+        </ul>
+      </aside>
+
+      <div class="projects-content">
+        <section id="project1">
+          <h2>Project 1</h2>
+          <p>A short description of project 1.</p>
+          <a href="https://github.com/username/project1" target="_blank">View on GitHub</a>
+        </section>
+        
+        <section id="project2">
+          <h2>Project 2</h2>
+          <p>A short description of project 2.</p>
+          <a href="https://github.com/username/project2" target="_blank">View on GitHub</a>
+        </section>
+        
+        <section id="project3">
+          <h2>Project 3</h2>
+          <p>A short description of project 3.</p>
+          <a href="https://github.com/username/project3" target="_blank">View on GitHub</a>
+        </section>
+      </div>
+    </div>
   </main>
   
   <!-- Spacer to simulate additional content for scrolling -->
   <div class="spacer"></div>
   
   <footer>
-    <p>© 2025 Sebastian Borukalo. All rights reserved. </p>
+    <p>All rights reserved © Your Name</p>
   </footer>
 </body>
 </html>

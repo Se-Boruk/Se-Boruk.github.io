@@ -1,0 +1,157 @@
+﻿/* Global Styles */
+body {
+    background-color: #ffffff;
+    color: #0a2114;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh; /* Slightly smaller than before */
+    background: linear-gradient(135deg, #3dcda7, #1f5b3c);
+    padding: 0 1rem;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navigation container */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Nav left */
+  .nav-left {
+    display: flex;
+  }
+  .navbar {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  .navbar li {
+    margin-right: 1.5rem;
+  }
+  .navbar a,
+  .navbar button {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Nav right with icons */
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  .nav-right a {
+    margin-left: 1rem;
+  }
+  
+  /* Header decorative accent */
+  header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; /* Subtle accent */
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 5px, transparent 5px, transparent 10px);
+  }
+  
+  /* Main Content */
+  main {
+    padding: 2rem;
+    margin-top: 12vh; /* Account for fixed header */
+  }
+  
+  /* Spacer for additional scrolling simulation */
+  .spacer {
+    height: 300px;
+  }
+  
+  /* Sections with grey highlight */
+  section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 5px solid #737373;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #737373;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Projects Page Layout */
+  .projects-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  /* Sticky Table of Contents for projects */
+  aside.toc {
+    position: sticky;
+    top: 12vh;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    width: 180px;
+    flex-shrink: 0;
+    /* Removed borders for a cleaner, flush design */
+  }
+  aside.toc h3 {
+    margin-top: 0;
+  }
+  aside.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  aside.toc ul li a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #0a2114;
+    border-radius: 4px;
+  }
+  aside.toc ul li a:hover,
+  aside.toc ul li a.active {
+    background-color: #e0e0e0; /* Subtle highlight on hover/active */
+  }
+  
+  /* Projects content area */
+  .projects-content {
+    padding: 1rem;
+    flex: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column;
+    }
+    aside.toc {
+      position: relative;
+      top: auto;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
