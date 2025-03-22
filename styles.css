@@ -1,157 +1,420 @@
 ﻿/* Global Styles */
 body {
-    background-color: #ffffff;
-    color: #0a2114;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 12vh; /* Slightly smaller than before */
-    background: linear-gradient(135deg, #3dcda7, #1f5b3c);
-    padding: 0 1rem;
-    box-sizing: border-box;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Navigation container */
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  /* Nav left */
-  .nav-left {
-    display: flex;
-  }
-  .navbar {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-  }
-  .navbar li {
-    margin-right: 1.5rem;
-  }
-  .navbar a,
-  .navbar button {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Nav right with icons */
-  .nav-right {
-    display: flex;
-    align-items: center;
-  }
-  .nav-right a {
-    margin-left: 1rem;
-  }
-  
-  /* Header decorative accent */
-  header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10px; /* Subtle accent */
-    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 5px, transparent 5px, transparent 10px);
-  }
-  
-  /* Main Content */
-  main {
-    padding: 2rem;
-    margin-top: 12vh; /* Account for fixed header */
-  }
-  
-  /* Spacer for additional scrolling simulation */
-  .spacer {
-    height: 300px;
-  }
-  
-  /* Sections with grey highlight */
-  section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-left: 5px solid #737373;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #737373;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* Projects Page Layout */
+  background: white;
+  color: #0a2114;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Static Animated Background Layer (Static SVG) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  /* 
+    Use an external SVG file as the background instead of inline SVG. 
+    Make sure the path to 'background.svg' is correct.
+  */
+  background: url("background.svg") no-repeat center center fixed;
+  background-size: cover; /* Ensures the SVG scales properly to fill the screen */
+}
+
+/* Top Bar (Navigation) - Remains on Top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  background: linear-gradient(135deg, #3dcda7, #1f5b3c);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* (Other existing CSS rules for navigation, content, etc.) */
+
+
+
+
+
+/* Navigation Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Brand & Language Selector */
+.brand {
+  display: flex;
+  align-items: center;
+}
+#brandName {
+  text-decoration: none;
+}
+#brandName h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  color: #ffffff;
+}
+
+/* Language Selector: Fixed size with flag and short text */
+.lang-selector {
+  background-color: #e0e0e0;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 1rem;
+  width: 60px;
+  text-align: center;
+}
+#currentLang {
+  font-size: 1rem;
+  color: #737373;
+}
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 100;
+  width: 100%;
+}
+.lang-dropdown div {
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #0a2114;
+}
+.lang-dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Nav Right with Links & Social Icons */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  margin: 0 1rem;
+}
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.social-icons a {
+  text-decoration: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+.social-icons a:focus,
+.social-icons a:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+  margin-top: 12vh;
+  position: relative;
+  z-index: 10;
+}
+
+/* Hero Section for Index: Two-column layout */
+#hero .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero-left {
+  flex: 1;
+  text-align: left;
+}
+.hero-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+}
+.hero-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background-color: #3dcda7;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.hero-btn:hover {
+  background-color: #1f5b3c;
+}
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-photo {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 5px;
+}
+
+/* Spacer */
+.spacer {
+  height: 300px;
+}
+
+/* Sections with Semi-Transparent Background & Blur */
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: rgba(249,249,249,0.35); /* slightly more transparent */
+  border-left: 5px solid rgba(115,115,115,0.8);
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('path/to/decorative-shape.png') no-repeat center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* About Container for Education & Work Experience */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.about-container > div {
+  flex: 1;
+  min-width: 250px;
+  background-color: rgba(244,244,244,0.35); /* slightly more transparent */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(244,244,244,0.35); /* slightly more transparent */
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+.skill-item img {
+  max-width: 50px;
+  margin-bottom: 0.5rem;
+}
+.skill-item span {
+  font-size: 0.9rem;
+}
+
+/* Contact Page: Two-Column Layout */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-right .contact-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contact Info & Send Message Sections */
+#contactInfo, #sendMessage {
+  background-color: rgba(249,249,249,0.35); /* slightly more transparent */
+  border-left: 5px solid rgba(115,115,115,0.8);
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.contact-form button {
+  padding: 0.7rem;
+  border: none;
+  background-color: #3dcda7;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background-color: #737373;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Projects Page Layout */
+.projects-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+aside.toc {
+  position: fixed;
+  top: 12vh;
+  left: 1rem;
+  background-color: rgba(245,245,245,0.95);
+  padding: 1rem;
+  width: 180px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+aside.toc h3 {
+  margin-top: 0;
+  text-align: left;
+}
+aside.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+aside.toc ul li a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #0a2114;
+  border-radius: 4px;
+  text-align: left;
+}
+aside.toc ul li a:hover,
+aside.toc ul li a.active {
+  background-color: #e0e0e0;
+}
+.projects-content {
+  padding: 1rem;
+  margin-left: 220px;
+  flex: 1;
+}
+
+/* Additional Projects List Styling (if needed) */
+#projects-list h2 {
+  margin-top: 1.5rem;
+  color: #1f5b3c;
+}
+#projects-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+#projects-list li {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-left: 3px solid #3dcda7;
+  border-radius: 4px;
+  background-color: rgba(249,249,249,0.9);
+}
+#projects-list li .date {
+  font-size: 0.9rem;
+  color: #737373;
+  margin-left: 0.5rem;
+}
+#projects-list li a {
+  text-decoration: none;
+  color: #3dcda7;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .projects-container {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-  /* Sticky Table of Contents for projects */
-  aside.toc {
-    position: sticky;
-    top: 12vh;
-    background-color: #f5f5f5;
-    padding: 1rem;
-    width: 180px;
-    flex-shrink: 0;
-    /* Removed borders for a cleaner, flush design */
-  }
-  aside.toc h3 {
-    margin-top: 0;
-  }
-  aside.toc ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  aside.toc ul li a {
-    display: block;
-    padding: 0.5rem;
-    text-decoration: none;
-    color: #0a2114;
-    border-radius: 4px;
-  }
-  aside.toc ul li a:hover,
-  aside.toc ul li a.active {
-    background-color: #e0e0e0; /* Subtle highlight on hover/active */
-  }
-  
-  /* Projects content area */
-  .projects-content {
-    padding: 1rem;
-    flex: 1;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .projects-container {
       flex-direction: column;
-    }
-    aside.toc {
+  }
+  aside.toc {
       position: relative;
       top: auto;
       width: 100%;
       margin-bottom: 1rem;
-    }
   }
-  
+}

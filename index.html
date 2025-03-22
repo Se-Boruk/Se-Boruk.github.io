@@ -2,64 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>My Portfolio - Home</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="scripts.js" defer></script>
 </head>
 <body>
+  <!-- Header with Navigation & Language Selector -->
   <header>
     <nav class="nav-container">
       <div class="nav-left">
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><button id="langToggle">PL/EN</button></li>
-        </ul>
+        <div class="brand">
+          <!-- Fixed Language Selector (with flag and short text) -->
+          <div class="lang-selector" id="langSelector">
+            <span id="currentLang">🇵🇱 PL</span>
+            <div class="lang-dropdown" id="langDropdown">
+              <div data-lang="pl">🇵🇱 PL</div>
+              <div data-lang="en">🇺🇸 ENG</div>
+            </div>
+          </div>
+          <!-- Brand Name (clickable, no underline) -->
+          <a href="index.html" id="brandName"><h1>Sebastian Borukalo [--Website in development--]</h1></a>
+        </div>
       </div>
       <div class="nav-right">
-        <a href="https://github.com/username" target="_blank" class="icon">
-          <!-- GitHub icon -->
-          <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true">
-            <path fill="#ffffff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
+        <ul class="nav-links">
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://github.com/Se-Boruk" target="_blank" class="icon">
+            <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill="#ffffff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
               0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
               1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
               0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 
               2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
               1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 
-              0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/username" target="_blank" class="icon">
-          <!-- LinkedIn icon -->
-          <svg height="24" width="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.23 0H1.77C.79 0 0 .77 0 1.723V22.27C0 23.223.79 24 1.77 24H22.23C23.21 24 
-              24 23.223 24 22.27V1.723C24 .77 23.21 0 22.23 0ZM7.09 20.452H3.56V9H7.09V20.452ZM5.325 
-              7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM20.452 20.452h-3.53V14.85c0-1.343-.027-3.074-1.87-3.074-1.87 
-              0-2.155 1.46-2.155 2.97v5.706H9.392V9h3.392v1.561h.048c.472-.893 
-              1.626-1.83 3.35-1.83 3.583 0 4.246 2.358 4.246 5.431v6.29Z"/>
-          </svg>
-        </a>
+              0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/sebastian-borukalo" target="_blank" class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.23 0H1.77C.79 0 0 .77 0 1.723V22.27C0 23.223.79 24 1.77 24H22.23C23.21 24 
+              24 23.223 24 22.27V1.723C24 .77 23.21 0 22.23 0ZM7.09 20.452H3.56V9H7.09V20.452ZM5.325 7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM20.452 20.452h-3.53V14.85c0-1.343-.027-3.074-1.87-3.074-1.87 0-2.155 1.46-2.155 2.97v5.706H9.392V9h3.392v1.561h.048c.472-.893 1.626-1.83 3.35-1.83 3.583 0 4.246 2.358 4.246 5.431v6.29Z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </nav>
   </header>
-
+  
+  <!-- Hero Section: Two-Column Layout (Text & Photo) -->
   <main>
-    <section id="intro">
-      <h1>Website in Development</h1>
-      <p>Welcome! This portfolio is currently under construction. Stay tuned for updates and exciting projects.</p>
-    </section>
-    
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="hero-buttons">
+            <a href="about.html" class="hero-btn">About Me</a>
+            <a href="projects.html" class="hero-btn">Projects</a>
+            <a href="contact.html" class="hero-btn">Contact</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <!-- Placeholder for your photo (replace with your image) -->
+          <img src="path/to/your-photo.jpg" alt="Sebastian Borukalo" class="hero-photo">
+        </div>
+      </div>
     </section>
   </main>
   
-  <!-- Spacer to simulate additional content for scrolling -->
   <div class="spacer"></div>
   
   <footer>
-    <p>© 2025 Sebastian Borukalo. All rights reserved. </p>
+    <p>© 2025 Sebastian Borukalo. All rights reserved.</p>
   </footer>
 </body>
 </html>
