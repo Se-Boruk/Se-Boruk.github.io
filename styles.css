@@ -23,7 +23,7 @@ body::before {
     Make sure the path to 'background.svg' is correct.
   */
   background: url("background.svg") no-repeat center center fixed;
-  background-size: cover; /* Ensures the SVG scales properly to fill the screen */
+  background-size: cover;
 }
 
 /* Top Bar (Navigation) - Remains on Top */
@@ -40,12 +40,6 @@ header {
   display: flex;
   align-items: center;
 }
-
-/* (Other existing CSS rules for navigation, content, etc.) */
-
-
-
-
 
 /* Navigation Container */
 .nav-container {
@@ -205,7 +199,7 @@ main {
 section {
   margin-bottom: 2rem;
   padding: 1rem;
-  background-color: rgba(249,249,249,0.35); /* slightly more transparent */
+  background-color: rgba(249,249,249,0.35);
   border-left: 5px solid rgba(115,115,115,0.8);
   border-radius: 5px;
   backdrop-filter: blur(5px);
@@ -234,37 +228,64 @@ section::before {
 .about-container > div {
   flex: 1;
   min-width: 250px;
-  background-color: rgba(244,244,244,0.35); /* slightly more transparent */
+  background-color: rgba(244,244,244,0.35);
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   backdrop-filter: blur(5px);
 }
 
-/* Skills Section */
-.skills-container {
+/* Skills & Tech Stack Section */
+#skills {
+  text-align: center;
+  margin: 2rem 0;
+}
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Single-Line Skills Grid */
+.skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
 }
-.skill-item {
+.skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(244,244,244,0.35); /* slightly more transparent */
-  padding: 0.5rem;
-  border-radius: 5px;
-  width: 100px;
-  text-align: center;
-  backdrop-filter: blur(5px);
 }
-.skill-item img {
-  max-width: 50px;
+
+.skill img {
+  width: 70px; /* Slightly larger icons */
+  height: 70px; /* Fixed height to normalize all icons */
+  object-fit: contain; /* Ensures logos scale correctly */
   margin-bottom: 0.5rem;
 }
-.skill-item span {
+
+.skill p {
+  font-size: 1rem;
+  color: #0a2114;
+  margin: 0;
+  height: 1.5em; /* Ensures uniform text height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill p strong {
+  font-weight: bold;
+}
+
+
+/* Note below the skills grid */
+.skills-note {
+  margin-top: 1rem;
   font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
 }
 
 /* Contact Page: Two-Column Layout */
@@ -287,15 +308,25 @@ section::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  left: 10%; /* Move container by 5% of its parent width */
 }
+
 .contact-right .contact-image {
   max-width: 100%;
   height: auto;
 }
 
+/* Media Query for Small Devices (Phones) */
+@media (max-width: 768px) {
+  .contact-right {
+    left: 0; /* Reset the left positioning on small screens */
+  }
+}
+
 /* Contact Info & Send Message Sections */
 #contactInfo, #sendMessage {
-  background-color: rgba(249,249,249,0.35); /* slightly more transparent */
+  background-color: rgba(249,249,249,0.35);
   border-left: 5px solid rgba(115,115,115,0.8);
   border-radius: 5px;
   backdrop-filter: blur(5px);
@@ -409,12 +440,12 @@ aside.toc ul li a.active {
 /* Responsive */
 @media (max-width: 768px) {
   .projects-container {
-      flex-direction: column;
+    flex-direction: column;
   }
   aside.toc {
-      position: relative;
-      top: auto;
-      width: 100%;
-      margin-bottom: 1rem;
+    position: relative;
+    top: auto;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
