@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attributions - My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <style>
+    /* Sticky Footer Setup */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Navigation & Language Selector -->
+  <header>
+    <nav class="nav-container">
+      <div class="nav-left">
+        <div class="brand">
+          <div class="lang-selector" id="langSelector">
+            <span id="currentLang">🇵🇱 PL</span>
+            <div class="lang-dropdown" id="langDropdown">
+              <div data-lang="pl">🇵🇱 PL</div>
+              <div data-lang="en">🇺🇸 ENG</div>
+            </div>
+          </div>
+          <a href="index.html" id="brandName">
+            <h1>Sebastian Borukało [--Strona w rozwoju--]</h1>
+          </a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="about.html">O mnie</a></li>
+          <li><a href="projects.html">Projekty</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://github.com/Se-Boruk" target="_blank" class="icon">
+            <!-- GitHub Icon -->
+          </a>
+          <a href="https://linkedin.com/in/sebastian-borukalo" target="_blank" class="icon">
+            <!-- LinkedIn Icon -->
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Attributions Section -->
+  <main>
+    <section id="attributions">
+      <div class="attributions-content">
+        <h2>Atrybucje</h2>
+        <p>Wszystkie ikonografiki użyte na stronie internetowej są pozyskane w sposób legalny z uwzględnieniem odpowiednich atrybucji pokazanych poniżej:</p>
+        <ul>
+          <!--<li><strong>Home</strong>: None</li>-->
+          <!--<li><strong>O mnie</strong>: None</li>-->
+          <!--<li><strong>Projekty</strong>: None</li>-->
+          <li><strong>Kontakt</strong>: <a href="https://storyset.com/internet" target="_blank">Internet illustrations by Storyset</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sebastian Borukalo. All rights reserved.</p>
+    <p><a href="attributions.html">Atrybucje</a></p>
+  </footer>
+</body>
+</html>
