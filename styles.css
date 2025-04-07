@@ -1,14 +1,19 @@
-﻿/* Global Styles */
+﻿/* ===== Global Styles ===== */
+html, body {
+  height: 100%;
+}
+
 body {
   background: white;
   color: #0a2114;
-  font-family: Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Static Animated Background Layer (Static SVG) */
 body::before {
   content: "";
   position: fixed;
@@ -18,15 +23,11 @@ body::before {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  /* 
-    Use an external SVG file as the background instead of inline SVG. 
-    Make sure the path to 'background.svg' is correct.
-  */
   background: url("background.svg") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Top Bar (Navigation) - Remains on Top */
+/* ===== Navigation ===== */
 header {
   position: fixed;
   top: 0;
@@ -41,21 +42,21 @@ header {
   align-items: center;
 }
 
-/* Navigation Container */
 .nav-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-/* Brand & Language Selector */
 .brand {
   display: flex;
   align-items: center;
 }
+
 #brandName {
   text-decoration: none;
 }
+
 #brandName h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -63,7 +64,7 @@ header {
   color: #ffffff;
 }
 
-/* Language Selector: Fixed size with flag and short text */
+/* ===== Language Selector ===== */
 .lang-selector {
   background-color: #e0e0e0;
   padding: 0.3rem 0.5rem;
@@ -75,10 +76,12 @@ header {
   width: 60px;
   text-align: center;
 }
+
 #currentLang {
   font-size: 1rem;
   color: #737373;
 }
+
 .lang-dropdown {
   display: none;
   position: absolute;
@@ -90,46 +93,54 @@ header {
   z-index: 100;
   width: 100%;
 }
+
 .lang-dropdown div {
   padding: 0.5rem;
   cursor: pointer;
   color: #0a2114;
 }
+
 .lang-dropdown div:hover {
   background-color: #f0f0f0;
 }
 
-/* Nav Right with Links & Social Icons */
+/* ===== Nav Right & Social Icons ===== */
 .nav-right {
   display: flex;
   align-items: center;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
+
 .nav-links li {
   margin: 0 1rem;
 }
+
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
 }
+
 .social-icons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 .social-icons a {
-  text-decoration: none;
-  outline: none;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  outline: none;
 }
+
 .social-icons a:focus,
 .social-icons a:active {
   outline: none !important;
@@ -138,77 +149,73 @@ header {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Main Content */
+/* ===== Main Content ===== */
 main {
   padding: 2rem;
   margin-top: 12vh;
   position: relative;
   z-index: 10;
+  flex: 1;
 }
 
-/* Container for the top part: text and image in columns */
+/* ===== Hero Section (if used) ===== */
 .hero-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem; /* increased space between top and buttons */
+  margin-bottom: 3rem;
 }
 
-/* Adjust text column */
 .hero-left {
   flex: 1 1 300px;
   padding: 1rem;
-  font-size: 1.1rem; /* slightly larger text */
+  font-size: 1.1rem;
 }
 
-/* Adjust image column */
 .hero-right {
   flex: 1 1 300px;
   padding: 1rem;
   text-align: center;
 }
 
-/* Style the photo */
 .hero-photo {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-/* Buttons container: uniformly spread */
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;       /* increased gap for wider spacing */
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-top: 2rem;  /* positions the buttons further below the top section */
+  margin-top: 2rem;
 }
 
-/* Button styling with subtle depth */
 .hero-btn {
   display: inline-block;
-  padding: 1rem 1.5rem;         /* bigger button for a prominent look */
+  padding: 1rem 1.5rem;
   background-color: #2E8B57;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 1.1rem;            /* slightly bigger font for clarity */
+  font-size: 1.1rem;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .hero-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Spacer */
+/* ===== Spacer ===== */
 .spacer {
   height: 150px;
 }
 
-/* Sections with Semi-Transparent Background & Blur */
+/* ===== Global Section Styling (Half-Transparent & Blurred) ===== */
 section {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -218,6 +225,7 @@ section {
   backdrop-filter: blur(5px);
   position: relative;
 }
+
 section::before {
   content: "";
   position: absolute;
@@ -231,10 +239,48 @@ section::before {
   z-index: -1;
 }
 
-/* About Container for Education & Work Experience */
-#aboutContent p {
-  font-size: 1.2rem; /* Zwiększa czcionkę */
+/* ===== Sidebar (Used in Projects & Other Pages) ===== */
+aside.toc {
+  position: fixed;
+  top: 12vh;
+  left: 1rem;
+  background-color: rgba(245,245,245,0.95);
+  padding: 1rem;
+  width: 180px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
+
+aside.toc h3 {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+aside.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside.toc ul li a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #0a2114;
+  border-radius: 4px;
+}
+
+aside.toc ul li a:hover,
+aside.toc ul li a.active {
+  background-color: #e0e0e0;
+}
+
+/* ===== About Section & Global Other Sections ===== */
+#aboutContent p {
+  font-size: 1.2rem;
+}
+
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -252,13 +298,14 @@ section::before {
   backdrop-filter: blur(5px);
 }
 
+/* ===== Timeline (For About Section) ===== */
 .education, .work-experience {
   width: 50%;
 }
 
 .education-entry, .work-entry {
   display: flex;
-  align-items: center;  /* centers the marker and content vertically */
+  align-items: center;
   gap: 1rem;
   margin-bottom: 2.5rem;
 }
@@ -274,7 +321,7 @@ section::before {
 .marker-year {
   font-weight: bold;
   color: #2E8B57;
-  white-space: nowrap;  /* Zapobiega łamaniu tekstu na dwie linie */
+  white-space: nowrap;
 }
 
 .marker-line {
@@ -305,20 +352,20 @@ p {
 }
 
 .work-experience .timeline-marker .marker-line {
-  height: 160px;  /* Adjust this value to whatever length you prefer */
+  height: 160px;
 }
 
-/* Skills & Tech Stack Section */
+/* ===== Skills & Tech Stack ===== */
 #skills {
   text-align: center;
   margin: 2rem 0;
 }
+
 #skills h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
-/* Single-Line Skills Grid */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -326,6 +373,7 @@ p {
   gap: 1.5rem;
   padding: 0 1rem;
 }
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -333,9 +381,9 @@ p {
 }
 
 .skill img {
-  width: 70px; /* Slightly larger icons */
-  height: 70px; /* Fixed height to normalize all icons */
-  object-fit: contain; /* Ensures logos scale correctly */
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
   margin-bottom: 0.5rem;
 }
 
@@ -343,16 +391,16 @@ p {
   font-size: 1rem;
   color: #0a2114;
   margin: 0;
-  height: 1.5em; /* Ensures uniform text height */
+  height: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .skill p strong {
   font-weight: bold;
 }
 
-/* Note below the skills grid */
 .skills-note {
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -360,7 +408,7 @@ p {
   color: #555;
 }
 
-/* Contact Page: Two-Column Layout */
+/* ===== Contact Page ===== */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -370,10 +418,12 @@ p {
   margin: 0 auto;
   text-align: left;
 }
+
 .contact-left {
   flex: 1;
   min-width: 300px;
 }
+
 .contact-right {
   flex: 1;
   min-width: 300px;
@@ -381,7 +431,7 @@ p {
   align-items: center;
   justify-content: center;
   position: relative;
-  left: 10%; /* Move container by 10% of its parent width */
+  left: 10%;
 }
 
 .contact-right .contact-image {
@@ -389,14 +439,12 @@ p {
   height: auto;
 }
 
-/* Media Query for Small Devices (Phones) */
 @media (max-width: 768px) {
   .contact-right {
-    left: 0; /* Reset the left positioning on small screens */
+    left: 0;
   }
 }
 
-/* Contact Info & Send Message Sections */
 #contactInfo, #sendMessage {
   background-color: rgba(249,249,249,0.35);
   border-left: 5px solid rgba(115,115,115,0.8);
@@ -405,16 +453,13 @@ p {
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.contact-form textarea {
-  resize: vertical;
-}
 
-/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 .contact-form input,
 .contact-form textarea {
   padding: 0.5rem;
@@ -422,6 +467,7 @@ p {
   border-radius: 4px;
   font-size: 1rem;
 }
+
 .contact-form button {
   padding: 0.7rem;
   border: none;
@@ -432,7 +478,7 @@ p {
   border-radius: 4px;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   background-color: #737373;
   color: #ffffff;
@@ -441,86 +487,84 @@ footer {
 }
 
 footer a {
-  text-decoration: underline; /* Underlined link for Attributions */
-  color: #66CDAA; /* Green color for the link */
-  font-weight: bold; /* Optional: makes the link stand out more */
+  text-decoration: underline;
+  color: #66CDAA;
+  font-weight: bold;
 }
 
 footer a:hover {
-  color: #ffffff; /* Light teal color on hover */
-  text-decoration: none; /* Removes underline when hovering */
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* Projects Page Layout */
+/* ===== Projects Page Specific Styles ===== */
+/* Remove extra container background so projects display directly on the page background */
 .projects-container {
   display: flex;
   flex-wrap: nowrap;
+  background: transparent;
 }
-aside.toc {
-  position: fixed;
-  top: 12vh;
-  left: 1rem;
-  background-color: rgba(245,245,245,0.95);
-  padding: 1rem;
-  width: 180px;
-  flex-shrink: 0;
-  border-radius: 4px;
-}
-aside.toc h3 {
-  margin-top: 0;
-  text-align: left;
-}
-aside.toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-aside.toc ul li a {
-  display: block;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: #0a2114;
-  border-radius: 4px;
-  text-align: left;
-}
-aside.toc ul li a:hover,
-aside.toc ul li a.active {
-  background-color: #e0e0e0;
-}
+
 .projects-content {
-  padding: 1rem;
+  padding: 2rem;
   margin-left: 220px;
   flex: 1;
 }
 
-/* Additional Projects List Styling (if needed) */
-#projects-list h2 {
-  margin-top: 1.5rem;
-  color: #1f5b3c;
-}
-#projects-list ul {
-  list-style: none;
-  padding-left: 0;
-}
-#projects-list li {
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  border-left: 3px solid #3dcda7;
-  border-radius: 4px;
-  background-color: rgba(249,249,249,0.9);
-}
-#projects-list li .date {
-  font-size: 0.9rem;
-  color: #737373;
-  margin-left: 0.5rem;
-}
-#projects-list li a {
-  text-decoration: none;
-  color: #3dcda7;
-  font-weight: bold;
+/* Projects sections use the global section style, so we do not override the background, border, etc. */
+/* Layout inside each project section */
+.projects-content section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
-/* Responsive */
+.project-text {
+  flex: 1;
+}
+
+.project-text h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  color: #1f5b3c;
+}
+
+.project-text p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3dcda7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Right Column: Vertically Stacked Images */
+.project-image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-image-stack img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styling for Projects Page */
 @media (max-width: 768px) {
   .projects-container {
     flex-direction: column;
@@ -531,30 +575,44 @@ aside.toc ul li a.active {
     width: 100%;
     margin-bottom: 1rem;
   }
+  .projects-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .projects-content section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project-image-stack {
+    align-items: center;
+  }
 }
 
-/* Attributions Section Styling */
+/* ===== Attributions Section ===== */
 #attributions {
   padding: 2rem;
-  background-color: rgba(249,249,249,0.35); /* Semi-transparent background */
+  background-color: rgba(249,249,249,0.35);
   border-left: 5px solid rgba(115,115,115,0.8);
   border-radius: 5px;
   backdrop-filter: blur(5px);
   margin-bottom: 2rem;
 }
+
 .attributions-content {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .attributions-content h2 {
   font-size: 2rem;
   color: #333;
 }
+
 .attributions-content ul {
   list-style: none;
   padding-left: 0;
 }
+
 .attributions-content li {
   margin-bottom: 1rem;
 }
-
