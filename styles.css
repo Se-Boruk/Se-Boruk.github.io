@@ -281,6 +281,7 @@ aside.toc ul li a.active {
   font-size: 1.2rem;
 }
 
+/* Main flex container for the about section */
 .about-container {
   display: flex;
   justify-content: space-between;
@@ -288,14 +289,46 @@ aside.toc ul li a.active {
   margin: 3rem 0;
 }
 
+/* Styles for each column inside the about container */
 .about-container > div {
   flex: 1;
   min-width: 250px;
-  background-color: rgba(244,244,244,0.35);
+  background-color: rgba(244, 244, 244, 0.35);
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
+}
+
+/* Inline image styling for the about text column */
+.about-inline-image {
+  float: right;               /* Places the image to the right of the text */
+  margin: 0 0 1rem 1rem;        /* Adds space between the image and text */
+  width: 250px;               /* Adjust size as desired */
+  border: 4px solid #fff;     /* Crisp white border */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Clear float after the paragraph if necessary */
+.about-text:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-inline-image {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 80%;  /* Larger relative image size on narrow screens */
+  }
 }
 
 /* ===== Timeline (For About Section) ===== */
@@ -326,7 +359,13 @@ aside.toc ul li a.active {
 
 .marker-line {
   width: 5px;
-  height: 75px;
+  height: 115px;
+  background: #2E8B57;
+}
+
+.work-marker-line {
+  width: 5px;
+  height: 250px;
   background: #2E8B57;
 }
 
@@ -511,12 +550,11 @@ footer a:hover {
   flex: 1;
 }
 
-/* Projects sections use the global section style, so we do not override the background, border, etc. */
-/* Layout inside each project section */
 .projects-content section {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  scroll-margin-top: 100px; 
 }
 
 .project-text {
@@ -548,42 +586,129 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Right Column: Vertically Stacked Images */
+/* Right Column: Inline (Side-by-Side) Images */
 .project-image-stack {
   display: flex;
+  flex-direction: row;    /* Maintain horizontal layout */
+  gap: 2rem;              /* Space between images */
+  justify-content: space-between; /* Distribute items with space between */
+  align-items: flex-start; /* Align items to the top */
+}
+.project-image-stack .media-item {
+  display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
 }
 
+
 .project-image-stack img {
-  width: 100%;
-  max-width: 250px;
+  height: 200px;              /* Fixed height */
+  width: auto;                /* Width adjusts to keep aspect ratio */
   border-radius: 5px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.project-image-stack video {
+  height: 200px;              /* Fixed height */
+  width: auto;                /* Width adjusts to keep aspect ratio */
+  border-radius: 5px;
+  object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+#project4 {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the text and image stack */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.project-text {
+  width: 50%; /* Give text section space */
+}
+
+.project4-image-stack {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for images */
+  gap: 2rem; /* Space between images */
+  justify-content: flex-start; /* Align images to the left */
+  align-items: flex-start; /* Align images to the top */
+  width: 50%; /* Set width to half of the section */
+  margin-left: auto; /* Push it to the right */
+}
+
+.project4-image-stack .media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width of each media item */
+}
+
+.project4-image-stack img, 
+.project4-image-stack video {
+  width: 100%; /* Make the images/videos take up full width */
+  height: auto; /* Allow height to adjust based on aspect ratio */
+  border-radius: 5px;
+  object-fit: contain;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Images on top in first project */
+.project1-stack {
+  display: flex;
+  flex-direction: column;  /* Stack the images vertically */
+  gap: 0rem;               /* Space between the images */
+  justify-content: flex-start; /* Align images at the top */
+  align-items: flex-end;   /* Align both images to the right side */
+}
+
+.project1-stack .media-item {
+  width: auto;             /* Width is automatic based on height */
+  height: 250px;           /* Set a fixed height for both images */
+  display: flex;
+  justify-content: center;
+}
+
+.project1-stack img {
+  height: 75%;            /* Keep the height consistent */
+  width: auto;             /* Maintain aspect ratio */
+  object-fit: contain;     /* Ensure the aspect ratio is preserved */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project1-stack .media-item.top-image {
+  align-self: flex-end;    /* Align the top image to the right */
+}
+
+.project-text {
+  flex: 1;                 /* Allow text to take remaining space */
+}
+
+
+
+
+/* Caption styling */
+.media-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+}
 /* Responsive Styling for Projects Page */
 @media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-  }
-  aside.toc {
-    position: relative;
-    top: auto;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .projects-content {
-    margin-left: 0;
-    padding: 1rem;
-  }
-  .projects-content section {
-    flex-direction: column;
-    text-align: center;
-  }
   .project-image-stack {
+    flex-direction: column;
     align-items: center;
   }
 }
@@ -615,4 +740,31 @@ footer a:hover {
 
 .attributions-content li {
   margin-bottom: 1rem;
+}
+
+/* Video section */
+.video-container {
+  width: 480px;       /* Slightly larger width */
+  height: 270px;      /* 16:9 height to match */
+  border: 4px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  background: #fff;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+
+@media (max-width: 420px) {
+  .video-container {
+    width: 90vw;
+    height: calc(90vw * 9 / 16);
+  }
 }

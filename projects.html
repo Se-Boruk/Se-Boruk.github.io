@@ -43,7 +43,7 @@
               <span id="currentLang">🇵🇱 PL</span>
               <div class="lang-dropdown" id="langDropdown">
                 <div data-lang="pl">🇵🇱 PL</div>
-                <div data-lang="en">🇺🇸 ENG</div>
+                <!--<div data-lang="en">🇺🇸 ENG</div>     As for now its hidden so user does not think its working language change - just placeholder-->
               </div>
             </div>
             <a href="index.html" id="brandName">
@@ -90,15 +90,23 @@
           <!-- Project 1 -->
           <section id="project1">
             <div class="project-text">
-              <h2>Praca inżynierska</h2>
+              <h2>Ocena artrozy stawu biodrowego na podstawie analizy obrazów RTG sąsiednich kości</h2>
               <p>
                 Praca inżynierska, w której celem było zbadanie korelacji między zmianami kości sąsiadujących ze stawem biodrowym a jego degeneracją.
                 Podczas pracy stosowałem różne techniki normalizacji danych, dopasowania rozmiaru obrazów, sieci konwolucyjne oraz techniki uczenia głębokiego, w celu uzyskania jak najlepszych wyników klasyfikacji artrozy.<br><br>
+                Udało mi się udowodnić, że występuje korelacja pomiędzy badanymi obszarami, a artrozą co otwiera pole do wnioskowania o niej bez użycia bezpośrednich zdjęć.<br><br>
                 Aktualnie kontynuuję badania w tym zakresie w celu napisania artykułu na konferencję biomedyczną.
               </p>
             </div>
-            <div class="project-image-stack">
-              <img src="project1.png" alt="Praca inżynierska">
+            <div class="project-image-stack project1-stack">
+              <div class="media-item top-image">
+                <img src="assets/images/PI_Miednica.png" alt="Badane obszary">
+                <div class="media-caption"><b>Badane obszary</b></div>
+              </div>
+              <div class="media-item">
+                <img src="assets/images/PI_schemat_sieci.png" alt="Siec neuronowa">
+                <div class="media-caption"><b>Schemat zwycięskiej sieci</b></div>
+              </div>
             </div>
           </section>
           <!-- Project 2 -->
@@ -115,11 +123,20 @@
               </a>
             </div>
             <div class="project-image-stack">
-              <img src="project2a.png" alt="Bob Ross ProGAN Sample 1">
-              <img src="project2b.png" alt="Bob Ross ProGAN Sample 2">
-              <img src="project2c.png" alt="Bob Ross ProGAN Sample 3">
+              <div class="media-item">
+                <img src="assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
+                <div class="media-caption"><b>Siatka wygenerowanych obrazów</b></div>
+              </div>
+              <div class="media-item">
+                <video autoplay loop muted playsinline width="100%">
+                  <source src="assets/images/ProGan_training.mp4"" type="video/mp4">
+                  <b>Your browser does not support the video tag.</b>
+                </video>
+                <div class="media-caption"><b>Proces uczenia sieci</b></div>
+              </div>
             </div>
           </section>
+
           <!-- Project 3 -->
           <section id="project3">
             <div class="project-text">
@@ -132,29 +149,41 @@
               </a>
             </div>
             <div class="project-image-stack">
-              <img src="assets/images/NeuroUtils_logo.svg" alt="NeuroUtils Library">
-              <img src="project3b.png" alt="NeuroUtils Sample 2">
-              <img src="project3c.png" alt="NeuroUtils Sample 3">
+              <div class="media-item">
+                <img src="assets/images/NeuroUtils_logo.svg" alt="Logo biblioteki">
+                <div class="media-caption"><b>Logo biblioteki</b></div>
+              </div>
+              <div class="media-item">
+                <img src="assets/images/NeuroUtils_flowchart.png" alt="Idea dzialania">
+                <div class="media-caption"><b>Idea dzialania</b></div>
+              </div>
             </div>
           </section>
+
           <!-- Project 4 -->
           <section id="project4">
             <div class="project-text">
               <h2>Cifar10 - human accuracy</h2>
               <p>
                 Projekt skupiony na wykorzystaniu w praktyce biblioteki NeuroUtils w celu zarządzania projektem.<br><br>
-                Obejmował zaimplementowania własnej architektury sieci konwolucyjnej wraz z technikami optymalizacji uczenia, w celu osiągnięcia dokładności jaką osiąga człowiek na zbiorze Cifar10 (94%).
+                Obejmował zaimplementowania własnej architektury sieci konwolucyjnej wraz z technikami optymalizacji uczenia, w celu osiągnięcia dokładności 94%, czyli dokładnie takiej jaką osiąga przeciętnie człowiek na zbiorze Cifar10.
               </p>
               <a class="project-link" href="https://github.com/Se-Boruk/Cifar10_Classification" target="_blank">
                 GitHub Link
               </a>
             </div>
-            <div class="project-image-stack">
-              <img src="project4a.png" alt="Cifar10 Sample 1">
-              <img src="project4b.png" alt="Cifar10 Sample 2">
-              <img src="project4c.png" alt="Cifar10 Sample 3">
+            <div class="project4-image-stack">
+              <div class="media-item">
+                <img src="assets/images/Cifar_conf.png" alt="Conf_matrix">
+                <div class="media-caption"><b>Macierz pomyłek modelu</b></div>
+              </div>
+              <div class="media-item">
+                <img src="assets/images/Cifar_model.png" alt="Model_pdf">
+                <div class="media-caption"><b>Podsumowanie modelu</b></div>
+              </div>
             </div>
           </section>
+
         </div>
       </div>
     </main>

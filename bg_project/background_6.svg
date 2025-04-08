@@ -1,0 +1,176 @@
+<svg width="100vw" height="100vh" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lightMintyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa; stop-opacity:1" /> <!-- Prawie biały -->
+      <stop offset="40%" style="stop-color:#d6dadd; stop-opacity:1" /> <!-- Srebrzysty -->
+      <stop offset="100%" style="stop-color:#ccf5e7; stop-opacity:1" /> <!-- Jasna mięta -->
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#lightMintyGradient)" />
+
+
+  
+  <!-- Base Line -->
+  <g stroke="#767522" stroke-width="5" fill="none" stroke-linecap="round">
+    <!--<path d="M0,175 L1920,175" />-->
+  </g>
+  
+  <!-- Tree Structures -->
+  
+  <!-- Tree 1 -->
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M100,175 L100,215 L80,245 L80,365" />
+    <circle cx="80" cy="375" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+  
+  <!-- Tree 2 -->
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M70,175 L70,215 L50,245 L50,465" />
+    <path d="M58,485 L112,567 " />
+    <path d="M0,375 L15,375 L25,385 L25,455 L43,467" />
+    <circle cx="50" cy="475" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+
+  </g>
+  
+  <!-- Tree 3 -->
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M450,175 L450,195 L438,208 " />
+    <path d="M420,215 L160,215" />
+    <path d="M143,222 L120,260 L120,565 " />
+    <path d="M120,585 L120,640" />
+
+    <path d="M440,221 L460,238"/>
+    <path d="M470,255 L455,305" />
+    <circle cx="120" cy="650" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="150" cy="215" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="430" cy="215" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="470" cy="245" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="455" cy="315" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="120" cy="575" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+  
+  <!-- Additional Trees -->
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">
+    <!-- Tree 4 -->
+    <path d="M1850,175 L1850,250 L1870,290 L1870,440" />
+    <path d="M1864,460 L1830,510 L1830,590" />
+    <circle cx="1870" cy="450" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+
+  </g>
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">    
+    <!-- Tree 5 -->
+    <path d="M1100,175 L1078,205" />
+    <path d="M1070,225 L1070,290" />
+    <path d="M1079,223 L1150,315 L1150,405" />
+
+
+    <circle cx="1070" cy="215" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+
+  #Tree 6
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M1920,600 L1840,600" />
+    <path d="M1821,609 L1768,662" />
+    <path d="M1760,680 L1760,790" />
+    <path d="M1750,670 L1620,670" />
+    <path d="M1620,670 L1588,648" />
+    <path d="M1752,808 L1738, 822" />
+    <path d="M1760,812 L1760, 850" />
+    <path d="M1760,850 L1780,870" />
+    <path d="M1780,870 L1780,900" />
+    <path d="M1788,918 L1850,980" />
+    <path d="M1920,980 L1850,980" />
+    
+    <circle cx="1830" cy="600" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+
+    <circle cx="1580" cy="640" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="1760" cy="800" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="1730" cy="830" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="1780" cy="910" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+    <path d="M1920,800 L1860,800" />
+    <path d="M1843,793 L1768,678" />
+    <path d="M1843,808 L1822,827" />
+    
+    <circle cx="1815" cy="835" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="1850" cy="800" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    <circle cx="1760" cy="670" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M1920,650 L1880,650" />
+  <path d="M1880,650 L1868,662" />
+
+  <circle cx="1860" cy="670" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M1830,175 L1830,250" />
+  <path d="M1830,250 L1850,290" />
+  <path d="M1850,290 L1850,310" />
+    
+  <circle cx="1850" cy="320" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M1800,175 L1800,195" />
+  <path d="M1800,195 L1785,210" />
+  <path d="M1785,210 L1660,210" />
+  <path d="M1643,217 L1620,240" />
+  <path d="M1620,240 L1510,240" />
+
+  <circle cx="1650" cy="210" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  <circle cx="1500" cy="240" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+    
+  </g>
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M1815,175 L1815,195" />
+  <path d="M1815,195 L1787,223" />
+  <path d="M1787,223 L1730,223" />
+  <path d="M1730,223 L1720,233" />
+
+  <circle cx="1710" cy="243" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M1030,175 L1030, 250 L1063,292 " />
+  <circle cx="1070" cy="300" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <circle cx="1070" cy="300" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M1000,175 L1000, 250 L1040,300 " />
+  <path d="M1040,300 L1040, 315 L1143, 408" />
+  <path d="M1150,425 L1150, 480 L1162,492" />
+  <path d="M1078,308 L1102, 332" />
+    
+  <path d="M975,175 L975, 245, L1020, 300" />
+  <path d="M1020,300 L1020,310" />
+
+  <circle cx="1110" cy="340" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  <circle cx="1020" cy="320" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  <circle cx="1170" cy="500" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  <circle cx="1070" cy="300" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  <circle cx="1150" cy="415" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+
+  #Tree
+  <g stroke="#3EC2A0" stroke-width="5" fill="none" stroke-linecap="round">  
+  <path d="M950,175 L950, 200 L940,210 L810,210" />
+  <path d="M792,218 L775,235 L710,235" />
+    
+  <circle cx="800" cy="210" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  <circle cx="700" cy="235" r="10" fill="none" stroke="#3EC2A0" stroke-width="6"/>
+  </g>
+  
+</svg>
