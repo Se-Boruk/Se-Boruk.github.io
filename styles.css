@@ -374,7 +374,7 @@ aside.toc ul li a.active {
   height: 14px;
   border: 4px solid #2E8B57;
   border-radius: 50%;
-  background: white;
+  background: transparent;
 }
 
 .timeline-content {
@@ -522,7 +522,8 @@ footer {
   background-color: #737373;
   color: #ffffff;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem; /* slimmer padding */
+  font-size: 0.9rem; /* overall text slightly smaller */
 }
 
 footer a {
@@ -534,6 +535,12 @@ footer a {
 footer a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+/* Attribution link gets smaller */
+footer .attribution-link {
+  font-size: 0.8em;
+  margin-left: 1rem; /* spacing from the previous text */
 }
 
 /* ===== Projects Page Specific Styles ===== */
@@ -768,3 +775,60 @@ footer a:hover {
     height: calc(90vw * 9 / 16);
   }
 }
+
+/* Existing styling for contact info */
+.contact-info {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Inline container for contact details */
+.inline-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Style the copy icon container */
+.copy-icon {
+  cursor: pointer;
+  color: #2E8B57;
+  transition: transform 0.2s ease;
+  position: relative; /* For tooltip positioning */
+  vertical-align: middle; /* This aligns it nicely with text */
+  margin-left: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Change icon color on hover */
+.copy-icon:hover {
+  color: #3dcda7;
+  transform: scale(1.1);
+}
+
+/* Style for the inline SVG copy icon */
+.copy-svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: middle; /* Aligns SVG path nicely too */
+}
+
+/* Optional: Tooltip effect */
+.copy-icon::after {
+  display: none;
+}
+
+
