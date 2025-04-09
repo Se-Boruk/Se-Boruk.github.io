@@ -55,6 +55,8 @@ header {
 
 #brandName {
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 #brandName h1 {
@@ -302,10 +304,10 @@ aside.toc ul li a.active {
 
 /* Inline image styling for the about text column */
 .about-inline-image {
-  float: right;               /* Places the image to the right of the text */
-  margin: 0 0 1rem 1rem;        /* Adds space between the image and text */
-  width: 250px;               /* Adjust size as desired */
-  border: 4px solid #fff;     /* Crisp white border */
+  float: right;
+  margin: 0 0 1rem 1rem;
+  width: 250px;
+  border: 4px solid #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -315,20 +317,6 @@ aside.toc ul li a.active {
   content: "";
   display: table;
   clear: both;
-}
-
-/* Responsive adjustments for smaller devices */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-  }
-  
-  .about-inline-image {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem;
-    width: 80%;  /* Larger relative image size on narrow screens */
-  }
 }
 
 /* ===== Timeline (For About Section) ===== */
@@ -517,13 +505,37 @@ p {
   border-radius: 4px;
 }
 
+/* Copy Icon Fix for Contact Page */
+/* Adjusted to use fixed dimensions to avoid corruption on mobile */
+.copy-icon {
+  cursor: pointer;
+  color: #2E8B57;
+  transition: transform 0.2s ease;
+  position: relative; /* For tooltip positioning */
+  vertical-align: middle; /* This aligns it nicely with text */
+  margin-left: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.copy-icon:hover {
+  color: #3dcda7;
+  transform: scale(1.1);
+}
+.copy-svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+
 /* ===== Footer ===== */
 footer {
   background-color: #737373;
   color: #ffffff;
   text-align: center;
-  padding: 0.5rem; /* slimmer padding */
-  font-size: 0.9rem; /* overall text slightly smaller */
+  padding: 0.5rem;
+  font-size: 0.9rem;
 }
 
 footer a {
@@ -537,10 +549,9 @@ footer a:hover {
   text-decoration: none;
 }
 
-/* Attribution link gets smaller */
 footer .attribution-link {
   font-size: 0.8em;
-  margin-left: 1rem; /* spacing from the previous text */
+  margin-left: 1rem;
 }
 
 /* ===== Projects Page Specific Styles ===== */
@@ -561,7 +572,7 @@ footer .attribution-link {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  scroll-margin-top: 100px; 
+  scroll-margin-top: 100px;
 }
 
 .project-text {
@@ -596,114 +607,102 @@ footer .attribution-link {
 /* Right Column: Inline (Side-by-Side) Images */
 .project-image-stack {
   display: flex;
-  flex-direction: row;    /* Maintain horizontal layout */
-  gap: 2rem;              /* Space between images */
-  justify-content: space-between; /* Distribute items with space between */
-  align-items: flex-start; /* Align items to the top */
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
 }
+
 .project-image-stack .media-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
 .project-image-stack img {
-  height: 200px;              /* Fixed height */
-  width: auto;                /* Width adjusts to keep aspect ratio */
+  height: 200px;
+  width: auto;
   border-radius: 5px;
-  object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
+  object-fit: contain;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 .project-image-stack video {
-  height: 200px;              /* Fixed height */
-  width: auto;                /* Width adjusts to keep aspect ratio */
+  height: 200px;
+  width: auto;
   border-radius: 5px;
-  object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
+  object-fit: contain;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Project 4 adjustments */
 #project4 {
   display: flex;
-  justify-content: space-between; /* Distribute space between the text and image stack */
-  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .project-text {
-  width: 50%; /* Give text section space */
+  width: 50%;
 }
 
 .project4-image-stack {
   display: flex;
-  flex-direction: row; /* Horizontal layout for images */
-  gap: 2rem; /* Space between images */
-  justify-content: flex-start; /* Align images to the left */
-  align-items: flex-start; /* Align images to the top */
-  width: 50%; /* Set width to half of the section */
-  margin-left: auto; /* Push it to the right */
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  margin-left: auto;
 }
 
 .project4-image-stack .media-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Full width of each media item */
+  width: 100%;
 }
 
 .project4-image-stack img, 
 .project4-image-stack video {
-  width: 100%; /* Make the images/videos take up full width */
-  height: auto; /* Allow height to adjust based on aspect ratio */
+  width: 100%;
+  height: auto;
   border-radius: 5px;
   object-fit: contain;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
-
-
-
-
-
-
-/*Images on top in first project */
+/* Images on top in first project */
 .project1-stack {
   display: flex;
-  flex-direction: column;  /* Stack the images vertically */
-  gap: 0rem;               /* Space between the images */
-  justify-content: flex-start; /* Align images at the top */
-  align-items: flex-end;   /* Align both images to the right side */
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .project1-stack .media-item {
-  width: auto;             /* Width is automatic based on height */
-  height: 250px;           /* Set a fixed height for both images */
+  width: auto;
+  height: 250px;
   display: flex;
   justify-content: center;
 }
 
 .project1-stack img {
-  height: 75%;            /* Keep the height consistent */
-  width: auto;             /* Maintain aspect ratio */
-  object-fit: contain;     /* Ensure the aspect ratio is preserved */
+  height: 75%;
+  width: auto;
+  object-fit: contain;
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project1-stack .media-item.top-image {
-  align-self: flex-end;    /* Align the top image to the right */
+  align-self: flex-end;
 }
 
 .project-text {
-  flex: 1;                 /* Allow text to take remaining space */
+  flex: 1;
 }
-
-
-
 
 /* Caption styling */
 .media-caption {
@@ -712,41 +711,57 @@ footer .attribution-link {
   margin-top: 0.5rem;
   text-align: center;
 }
-/* Responsive Styling for Projects Page */
+
+/* ===== Responsive Adjustments for Mobile Devices ===== */
+/* Global mobile adjustments */
 @media (max-width: 768px) {
-  .project-image-stack {
-    flex-direction: column;
-    align-items: center;
+  /* Adjust header */
+  header {
+    height: 10vh;
+    padding: 0 0.5rem;
   }
-}
 
-/* ===== Attributions Section ===== */
-#attributions {
-  padding: 2rem;
-  background-color: rgba(249,249,249,0.35);
-  border-left: 5px solid rgba(115,115,115,0.8);
-  border-radius: 5px;
-  backdrop-filter: blur(5px);
-  margin-bottom: 2rem;
-}
+  /* Decrease nav link font size */
+  .nav-links a {
+    font-size: 1rem;
+  }
 
-.attributions-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
+  /* Stack navigation links vertically if needed */
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-.attributions-content h2 {
-  font-size: 2rem;
-  color: #333;
-}
+  /* Main content padding reduces */
+  main {
+    padding: 1rem;
+    margin-top: 10vh;
+  }
 
-.attributions-content ul {
-  list-style: none;
-  padding-left: 0;
-}
+  /* Sidebar (toc): reposition for mobile or hide if necessary */
+  aside.toc {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    margin-bottom: 1rem;
+  }
 
-.attributions-content li {
-  margin-bottom: 1rem;
+  /* Adjust brand name font size */
+  #brandName h1 {
+    font-size: 1.6rem;
+  }
+  
+  /* Reduce global section padding and margins */
+  section {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+  }
+  
+  /* Adjust timeline markers size if needed */
+  .timeline-marker {
+    min-width: 40px;
+  }
 }
 
 /* Video section */
@@ -768,67 +783,10 @@ footer .attribution-link {
   border: none;
 }
 
-
+/* Additional adjustments for very small devices */
 @media (max-width: 420px) {
   .video-container {
     width: 90vw;
     height: calc(90vw * 9 / 16);
   }
 }
-
-/* Existing styling for contact info */
-.contact-info {
-  font-size: 1.15rem;
-  margin-bottom: 1rem;
-}
-
-.contact-info h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.contact-info p {
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-/* Inline container for contact details */
-.inline-contact {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-/* Style the copy icon container */
-.copy-icon {
-  cursor: pointer;
-  color: #2E8B57;
-  transition: transform 0.2s ease;
-  position: relative; /* For tooltip positioning */
-  vertical-align: middle; /* This aligns it nicely with text */
-  margin-left: 0.5rem;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Change icon color on hover */
-.copy-icon:hover {
-  color: #3dcda7;
-  transform: scale(1.1);
-}
-
-/* Style for the inline SVG copy icon */
-.copy-svg {
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  vertical-align: middle; /* Aligns SVG path nicely too */
-}
-
-/* Optional: Tooltip effect */
-.copy-icon::after {
-  display: none;
-}
-
-
