@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Se-Boruk Projekty</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js" defer></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Additional inline base styles (if needed) */
+      body {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2, h3, h4 {
+        font-weight: 700;
+        color: #333;
+      }
+      p {
+        color: #555;
+      }
+      a {
+        color: #2E8B57;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with Navigation & Language Selector -->
+    <header>
+      <nav class="nav-container">
+        <div class="nav-left">
+          <div class="brand">
+          <!-- Fixed Language Selector (with flag and short text) -->
+          <div class="lang-selector" id="langSelector">
+            <span id="currentLang">
+            <img src="/assets/flags/pl_flag.png" alt="PL" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> PL
+            </span>
+            <div class="lang-dropdown" id="langDropdown" style="display:none;">
+              <div data-lang="en">
+                <img src="/assets/flags/us_flag.png" alt="US" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> EN
+              </div>
+              <div data-lang="pl">
+                <img src="/assets/flags/pl_flag.png" alt="PL" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> PL
+              </div>
+            </div>
+          </div>
+            <!-- Brand Name (clickable, no underline) -->
+            <a href="index.html" id="brandName"><h1>Sebastian Borukało</h1></a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="about.html">O mnie</a></li>
+            <li><a href="projects.html">Projekty</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://github.com/Se-Boruk" target="_blank" class="icon">
+              <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true">
+                <path fill="#ffffff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+                1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+                0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 
+                2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+                1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 
+                0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/sebastian-borukalo" target="_blank" class="icon">
+              <svg height="24" width="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.23 0H1.77C.79 0 0 .77 0 1.723V22.27C0 23.223.79 24 1.77 24H22.23C23.21 24 
+                24 23.223 24 22.27V1.723C24 .77 23.21 0 22.23 0ZM7.09 20.452H3.56V9H7.09V20.452ZM5.325 7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM20.452 20.452h-3.53V14.85c0-1.343-.027-3.074-1.87-3.074-1.87 0-2.155 1.46-2.155 2.97v5.706H9.392V9h3.392v1.561h.048c.472-.893 1.626-1.83 3.35-1.83 3.583 0 4.246 2.358 4.246 5.431v6.29Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Main Content for Projects Page -->
+    <main>
+      <div class="projects-container">
+        <!-- Fixed Sidebar Menu with Pinned and Other Projects -->
+        <aside class="toc">
+          <h3>Projekty</h3>
+          <ul class="all-projects">
+            <li><a href="#project1">Praca inż.</a></li>
+            <li><a href="#project2">CornHub DataSet</a></li>
+            <li><a href="#project3">BobRoss ProGAN</a></li>
+            <li><a href="#project4">NeuroUtils</a></li>
+            <li><a href="#project5">Cifar10 Human accuracy</a></li>
+          </ul>
+        </aside>
+        <div class="projects-content">
+          <!-- Project 1 -->
+          <section id="project1">
+            <div class="project-text">
+              <h2>Ocena artrozy stawu biodrowego na podstawie analizy obrazów RTG sąsiednich kości</h2>
+              <p>
+                Praca inżynierska, w której celem było zbadanie korelacji między zmianami kości sąsiadujących ze stawem biodrowym a jego degeneracją.
+                Podczas pracy stosowałem różne techniki normalizacji danych, dopasowania rozmiaru obrazów, sieci konwolucyjne oraz techniki uczenia głębokiego, w celu uzyskania jak najlepszych wyników klasyfikacji artrozy.<br><br>
+                Udało mi się wykazać, że występuje korelacja pomiędzy badanymi obszarami, a artrozą co otwiera pole do wnioskowania o niej bez użycia bezpośrednich zdjęć.<br><br>
+                Aktualnie artykuł naukowy napisany na podstawie pracy inżynierskiej został zgłoszony na konferencję biomedyczną i czeka na recenzję.
+              </p>
+            </div>
+            <div class="project-image-stack project1-stack">
+              <div class="media-item top-image">
+                <img src="/assets/images/PI_Miednica.png" alt="Badane obszary">
+                <div class="media-caption"><b>Badane obszary</b></div>
+              </div>
+              <div class="media-item">
+                <img src="/assets/images/PI_schemat_sieci.png" alt="Siec neuronowa">
+                <div class="media-caption"><b>Schemat zaproponowanej sieci</b></div>
+              </div>
+            </div>
+          </section>
+          <!-- Project 2 -->
+          <section id="project2">
+            <div class="project-text">
+              <h2>CornHub: Zestaw danych do segmentacji instancyjnej kolb kukurydzy</h2>
+              <p>
+                CornHub to zestaw danych zawierający kolby kukurydzy i odpowiadające im maski w rzeczywistych warunkach polowych. Zawiera 304 obrazy RGB w wysokiej rozdzielczości.<br><br> 
+                Może być używany do trenowania i oceny modeli segmentacji instancyjnej, czy detekcji obiektów w wizji komputerowej, szczególnie w rolnictwie, oraz przy pracach naukowych w tych dziedzinach.<br><br> 
+                Zbiór można znaleźć pod jednym z dostępnych linków:
+              </p>
+              <a class="project-link" href="https://doi.org/10.5281/zenodo.15453713" target="_blank">
+                Zenodo
+              </a>
+              <br>
+              <a class="project-link" href="https://www.kaggle.com/datasets/ciapserr/cornhub-instance-segmentation-dataset" target="_blank">
+                Kaggle
+              </a>
+              <br>
+              <a class="project-link" href="https://paperswithcode.com/dataset/cornhub" target="_blank">
+                PapersWithCode
+              </a>
+            </div>
+            <div class="project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/CornHub_thumbnail.png" alt="Thumbnail">
+                <div class="media-caption"><b>Zdjęcie i maska (obraz poglądowy)</b></div>
+              </div>
+            </div>
+          </section>
+          <!-- Project 3 -->
+          <section id="project3">
+            <div class="project-text">
+              <h2>BobRoss ProGAN</h2>
+              <p>
+                Generacyjna sieć neuronowa tworząca obrazy w stylu Boba Rossa.
+                Oparta jest o metodę Progressive-GAN, tworzącej obrazy o stopniowo coraz większej rozdzielczości.
+                Sieć została zaimplementowana od podstaw oraz została wyszkolona na zestawie 5 tysięcy obrazów, namalowanych w stylu artysty.
+              </p>
+              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
+                GitHub Link
+              </a>
+            </div>
+            <div class="project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
+                <div class="media-caption"><b>Siatka wygenerowanych obrazów</b></div>
+              </div>
+              <div class="media-item">
+                <video autoplay loop muted playsinline width="100%">
+                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
+                  <b>Your browser does not support the video tag.</b>
+                </video>
+                <div class="media-caption"><b>Proces uczenia sieci</b></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Project 4 -->
+          <section id="project4">
+            <div class="project-text">
+              <h2>NeuroUtils</h2>
+              <p>
+                Biblioteka programistyczna skupiona na automatyzacji zadań i zarządzaniem projektami, związanych z wizją komputerową i uczeniem głębokim.
+              </p>
+              <a class="project-link" href="https://github.com/Se-Boruk/NeuroUtils" target="_blank">
+                GitHub Link
+              </a>
+            </div>
+            <div class="project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/NeuroUtils_logo.svg" alt="Logo biblioteki">
+                <div class="media-caption"><b>Logo biblioteki</b></div>
+              </div>
+              <div class="media-item">
+                <img src="/assets/images/NeuroUtils_flowchart.png" alt="Idea dzialania">
+                <div class="media-caption"><b>Idea dzialania</b></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Project 5 -->
+          <section id="project5">
+            <div class="project-text">
+              <h2>Cifar10 - human accuracy</h2>
+              <p>
+                Projekt skupiony na wykorzystaniu w praktyce biblioteki NeuroUtils w celu zarządzania projektem.<br><br>
+                Obejmował zaimplementowania własnej architektury sieci konwolucyjnej wraz z technikami optymalizacji uczenia, w celu osiągnięcia dokładności 94%, czyli dokładnie takiej jaką osiąga przeciętnie człowiek na zbiorze Cifar10.
+              </p>
+              <a class="project-link" href="https://github.com/Se-Boruk/Cifar10_Classification" target="_blank">
+                GitHub Link
+              </a>
+            </div>
+            <div class="project4-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/Cifar_conf.png" alt="Conf_matrix">
+                <div class="media-caption"><b>Macierz pomyłek modelu</b></div>
+              </div>
+              <div class="media-item">
+                <img src="/assets/images/Cifar_model.png" alt="Model_pdf">
+                <div class="media-caption"><b>Podsumowanie modelu</b></div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+    
+    <div class="spacer"></div>
+    
+    <footer>
+      <p>© 2025 Sebastian Borukalo. All rights reserved. <a href="attributions.html" class="attribution-link">Atrybucje</a></p>
+    </footer>
+  </body>
+</html>

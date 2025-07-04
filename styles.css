@@ -64,7 +64,6 @@ header {
   color: #ffffff;
 }
 
-/* ===== Language Selector ===== */
 .lang-selector {
   background-color: #e0e0e0;
   padding: 0.3rem 0.5rem;
@@ -73,13 +72,19 @@ header {
   position: relative;
   display: inline-block;
   margin-right: 1rem;
-  width: 60px;
-  text-align: center;
-}
-
-#currentLang {
+  width: 70px; /* widen to fit flag+text */
+  text-align: left; /* better for flag+text */
   font-size: 1rem;
   color: #737373;
+  user-select: none;
+}
+
+#currentLang img,
+.lang-dropdown div img {
+  width: 20px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 .lang-dropdown {
@@ -92,12 +97,15 @@ header {
   border-radius: 4px;
   z-index: 100;
   width: 100%;
+  font-size: 1rem;
+  color: #0a2114;
 }
 
 .lang-dropdown div {
   padding: 0.5rem;
   cursor: pointer;
-  color: #0a2114;
+  display: flex;
+  align-items: center;
 }
 
 .lang-dropdown div:hover {
