@@ -25,11 +25,22 @@ document.querySelectorAll('.lang-selector').forEach(selector => {
 
   const currentPath = window.location.pathname;
   const actualLang = detectLang(currentPath);
-  const savedLang = localStorage.getItem('selectedLang') || actualLang;
+  let savedLang = localStorage.getItem('selectedLang') || actualLang;
 
+  // Redirect to match savedLang if mismatch on initial load
+  if (savedLang !== actualLang) {
+    const parts = currentPath.split('/');
+    const filename = parts.pop() || 'index.html';
+    const redirectPath = (savedLang === 'en') ? `/${filename}` : `/${savedLang}/${filename}`;
+    window.location.href = redirectPath;
+    return;
+  }
+
+  // Apply language display
   localStorage.setItem('selectedLang', savedLang);
   updateLangDisplay(savedLang);
 
+  // Dropdown toggle
   currentLang.addEventListener('click', e => {
     e.stopPropagation();
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
@@ -39,6 +50,7 @@ document.querySelectorAll('.lang-selector').forEach(selector => {
     dropdown.style.display = 'none';
   });
 
+  // On language change
   dropdown.querySelectorAll('div[data-lang]').forEach(item => {
     item.addEventListener('click', () => {
       const selectedLang = item.getAttribute('data-lang');
@@ -47,12 +59,10 @@ document.querySelectorAll('.lang-selector').forEach(selector => {
       localStorage.setItem('selectedLang', selectedLang);
       updateLangDisplay(selectedLang);
 
-      const currentParts = window.location.pathname.split('/');
-      const filename = currentParts.pop() || 'index.html';
-
-      window.location.href = selectedLang === 'en'
-        ? `/${filename}`
-        : `/${selectedLang}/${filename}`;
+      const parts = window.location.pathname.split('/');
+      const filename = parts.pop() || 'index.html';
+      const redirectPath = (selectedLang === 'en') ? `/${filename}` : `/${selectedLang}/${filename}`;
+      window.location.href = redirectPath;
     });
   });
 });
