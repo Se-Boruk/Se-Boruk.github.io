@@ -23,7 +23,7 @@ body::before {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  background: url("background.svg") no-repeat center center fixed;
+  background: url("/assets/background.svg") no-repeat center center fixed;
   background-size: cover;
 }
 

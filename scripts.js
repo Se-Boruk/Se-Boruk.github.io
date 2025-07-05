@@ -1,118 +1,61 @@
-// Language Selector Dropdown Functionality with Persistence & Redirect
 document.querySelectorAll('.lang-selector').forEach(selector => {
   const currentLang = selector.querySelector('#currentLang');
   const dropdown = selector.querySelector('.lang-dropdown');
 
-  // Normalize path: treat '/' or '' as '/index.html' for consistency
-  function normalizePath(path) {
-    return (path === '' || path === '/') ? '/index.html' : path;
-  }
-
-  // Detect language by path prefix
   function detectLang(path) {
-    return path.startsWith('/pl/') ? 'pl' : 'en';
+    if (path.startsWith('/pl/')) return 'pl';
+    if (path.startsWith('/cn/')) return 'cn';
+    return 'en';
   }
 
-  // Update language display in selector and <html lang>
   function updateLangDisplay(lang) {
-    if (lang === 'en') {
-      currentLang.innerHTML = `<img src="/assets/flags/us_flag.png" alt="US" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> EN`;
-    } else {
-      currentLang.innerHTML = `<img src="/assets/flags/pl_flag.png" alt="PL" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> PL`;
-    }
+    const flags = {
+      en: '/assets/flags/en_flag.png',
+      pl: '/assets/flags/pl_flag.png',
+      cn: '/assets/flags/cn_flag.png'
+    };
+    const label = lang.toUpperCase();
+    currentLang.innerHTML = `<img src="${flags[lang]}" alt="${label}" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> ${label}`;
     document.documentElement.lang = lang;
-  }
 
-  // Rewrite nav links based on current language to avoid relative path issues
-  function rewriteNavLinks(lang) {
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (lang === 'pl') {
-        if (!href.startsWith('/pl/') && !href.startsWith('http') && !href.startsWith('#')) {
-          link.setAttribute('href', '/pl/' + href);
-        }
-      } else {
-        if (href.startsWith('/pl/')) {
-          link.setAttribute('href', href.replace(/^\/pl\//, '/'));
-        }
-      }
+    dropdown.querySelectorAll('div[data-lang]').forEach(item => {
+      item.style.display = item.getAttribute('data-lang') === lang ? 'none' : 'block';
     });
   }
 
-  // Get current path and language info
-  let currentPath = normalizePath(window.location.pathname);
-  let actualLang = detectLang(currentPath);
-  let savedLang = localStorage.getItem('selectedLang');
+  const currentPath = window.location.pathname;
+  const actualLang = detectLang(currentPath);
+  const savedLang = localStorage.getItem('selectedLang') || actualLang;
 
-  // Fix mismatch between savedLang and actualLang by redirecting if necessary
-  if (!savedLang) {
-    // No savedLang yet, save current detected language
-    localStorage.setItem('selectedLang', actualLang);
-    savedLang = actualLang;
-  } else if (savedLang !== actualLang) {
-    // Redirect to keep URL and savedLang in sync
-    if (savedLang === 'pl' && !currentPath.startsWith('/pl/')) {
-      window.location.href = '/pl' + currentPath;
-      return;
-    } else if (savedLang === 'en' && currentPath.startsWith('/pl/')) {
-      const newPath = currentPath.replace(/^\/pl/, '') || '/index.html';
-      window.location.href = newPath;
-      return;
-    }
-  }
-
-  // Initial display update and nav link rewrite
+  localStorage.setItem('selectedLang', savedLang);
   updateLangDisplay(savedLang);
-  rewriteNavLinks(savedLang);
 
-  // Toggle dropdown visibility on currentLang click
   currentLang.addEventListener('click', e => {
     e.stopPropagation();
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
   });
 
-  // Close dropdown if clicking outside
   document.addEventListener('click', () => {
     dropdown.style.display = 'none';
   });
 
-  // Handle language selection clicks
   dropdown.querySelectorAll('div[data-lang]').forEach(item => {
     item.addEventListener('click', () => {
       const selectedLang = item.getAttribute('data-lang');
-
-      if (selectedLang === savedLang) {
-        dropdown.style.display = 'none';
-        return;
-      }
+      if (selectedLang === savedLang) return;
 
       localStorage.setItem('selectedLang', selectedLang);
       updateLangDisplay(selectedLang);
-      rewriteNavLinks(selectedLang);
-      dropdown.style.display = 'none';
 
-      const path = normalizePath(window.location.pathname);
+      const currentParts = window.location.pathname.split('/');
+      const filename = currentParts.pop() || 'index.html';
 
-      if (selectedLang === 'pl') {
-        if (path.startsWith('/pl/')) return;
-
-        if (path === '/index.html') {
-          window.location.href = '/pl/index.html';
-          return;
-        }
-        window.location.href = '/pl' + path;
-      } else {
-        if (!path.startsWith('/pl/')) return;
-
-        const newPath = path.replace(/^\/pl/, '') || '/index.html';
-        window.location.href = newPath;
-      }
+      window.location.href = selectedLang === 'en'
+        ? `/${filename}`
+        : `/${selectedLang}/${filename}`;
     });
   });
 });
-
-
-
 
 // Hide dropdown when clicking outside
 document.addEventListener('click', () => {
