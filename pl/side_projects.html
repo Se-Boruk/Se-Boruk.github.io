@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Se-Boruk Poboczne projekty</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js" defer></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Additional inline base styles (if needed) */
+      body {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.1em;
+        line-height: 1.6;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2, h3, h4 {
+        font-weight: 700;
+        color: #333;
+      }
+      p {
+        color: #555;
+      }
+      a {
+        color: #2E8B57;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+  <!-- Header with Navigation & Language Selector -->
+  <header>
+    <nav class="nav-container">
+      <div class="nav-left">
+        <div class="brand">
+        <!-- Fixed Language Selector (with flag and short text) -->
+        <div class="lang-selector" id="langSelector">
+          <span id="currentLang">
+          <img src="/assets/flags/pl_flag.png" alt="PL" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> PL
+          </span>
+          <div class="lang-dropdown" id="langDropdown" style="display:none;">
+            <div data-lang="en">
+              <img src="/assets/flags/en_flag.png" alt="EN" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> EN
+            </div>
+            <div data-lang="pl">
+              <img src="/assets/flags/pl_flag.png" alt="PL" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> PL
+            </div>
+            <div data-lang="cn">
+              <img src="/assets/flags/cn_flag.png" alt="CN" style="width:20px; height:14px; vertical-align:middle; margin-right:6px;"> CN
+            </div>
+          </div>
+        </div>
+          <!-- Brand Name (clickable, no underline) -->
+          <a href="index.html" id="brandName"><h1>Sebastian Borukało</h1></a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="about.html">O mnie</a></li>
+        <li><a href="projects.html">Projekty techniczne</a></li>
+        <li><a href="side_projects.html">Projekty poboczne</a></li>  
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://github.com/Se-Boruk" target="_blank" class="icon">
+            <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill="#ffffff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+              1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+              0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 
+              2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+              1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 
+              0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/sebastian-borukalo" target="_blank" class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.23 0H1.77C.79 0 0 .77 0 1.723V22.27C0 23.223.79 24 1.77 24H22.23C23.21 24 
+              24 23.223 24 22.27V1.723C24 .77 23.21 0 22.23 0ZM7.09 20.452H3.56V9H7.09V20.452ZM5.325 7.433a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM20.452 20.452h-3.53V14.85c0-1.343-.027-3.074-1.87-3.074-1.87 0-2.155 1.46-2.155 2.97v5.706H9.392V9h3.392v1.561h.048c.472-.893 1.626-1.83 3.35-1.83 3.583 0 4.246 2.358 4.246 5.431v6.29Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+    <!-- Main Content for Projects Page -->
+    <main>
+      <div class="projects-container">
+        <!-- Fixed Sidebar Menu with Pinned and Other Projects -->
+        <aside class="toc">
+          <h3>Side projects</h3>
+          <ul class="all-projects">
+            <li><a href="#project1">Kampania marketingowa</a></li>
+            <li><a href="#project2">Latarka dźwiękowa</a></li>
+
+          </ul>
+        </aside>
+        <div class="projects-content">
+
+            <!-- Project 1 -->
+          <section id="project1">
+            <div class="project-text">
+              <h2>Lokalna kampania marketingowa rodzinnego gospodarstwa rolnego</h2>  
+              <p>
+                Wspólnie z moją siostrą zorganizowaliśmy lokalną kampanię marketingową w celu wypromowania lokalnego gospodarstwa rolnego poprzez:<br><br>
+                - Zaprojektowanie banerów, wizytówek i grafik promocyjnych wraz kodami QR<br>
+                - Utworzenie i początkowe zarządzanie stroną na Facebooku<br>
+                - Zorganizowanie kampani reklamowej na facebooku, w celu dotarcia do lokalnego odbiorcy<br>
+                - Połączenie fizycznych i cyfrowych strategii promocyjnych<br><br>
+
+                Przez okres 3 lat, działania te pozwoliły na bezpośrednie zwiększenie bazy klientów o około 30-40 % dodatkowo znacząco zwiększając rozpoznawalność lolaknej marki w regionie.
+              </p>  
+              <a class="project-link" href="https://www.facebook.com/profile.php?id=100095018736222" target="_blank">
+                Strona Facebook
+              </a>
+            </div>
+            <div class="side-project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/Baner.png" alt="Baner">
+                <div class="media-caption"><b>Baner reklamowy</b></div>
+              </div>
+              <div class="media-item">
+                <img src="/assets/images/B_card.png" alt="B_card">
+                <div class="media-caption"><b>Wizytówka</b></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="project2">
+            <div class="project-text">
+              <h2>Prototyp latarki dźwiękowej - urządzenia nawigującego dla niewidomych</h2>
+              <p>
+                Biomedyczny projekt grupowy w ramach studiów. wspólnie zaprojektowaliśmy prototyp urządzenia wswpomagającego osoby niewidome w codziennym funkcjonowaniu.<br>
+                Działanie "latarki", opierało się na wysyłaniu sygnału ultradźwiękowego, który po odbiciu wracał do użytkownika, po czym na podstawie natężenia dźwięku, czasu powrotu i innych subtelnych odczuć możliwe było zlokalizowanie przeszkód i nawigowanie w terenie.
+                <br><br>
+                Działanie urządzenia można porównać do zjawiska echolokacji.
+                <br><br>
+                Moje główne zadania obejmowały projektowanie obudowy oraz układu elektronicznego.
+              </p>                   
+            </div>
+
+            <div class="project-image-stack project1-stack">
+              <div class="media-item">
+                <img src="/assets/images/Group_photo.png" alt="Group_photo">
+                <div class="media-caption"><b>Grupa projektowa</b></div>
+              </div>
+
+              <div class="project-image-stack">
+                <div class="media-item">
+                  <img src="/assets/images/Flashlight.png" alt="Flashlight">
+                  <div class="media-caption"><b>Latarka dźwiękowa</b></div>
+                </div>
+                <div class="media-item">
+                  <video autoplay loop muted playsinline width="100%">
+                    <source src="/assets/images/Flash_assembly.mp4" type="video/mp4">
+                    <b>Twoja przęglądarka nie obsługuje tego rodzaju wideo</b>
+                  </video>
+                  <div class="media-caption"><b>Schemat 1-go prototypu</b></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+    
+    <div class="spacer"></div>
+    
+    <footer>
+      <p>© 2025 Sebastian Borukalo. All rights reserved. <a href="attributions.html" class="attribution-link">Atrybucje</a></p>
+    </footer>
+  </body>
+</html>

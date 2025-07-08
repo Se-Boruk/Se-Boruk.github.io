@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
 
-    <title>Se-Boruk 版权声明</title>
+    <title>Se-Boruk 副项目</title>
     <link rel="stylesheet" href="/styles.css">
     <script src="/scripts.js" defer></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      /* Additional inline base styles (if needed) */
       body {
         font-family: 'Lato', sans-serif;
         font-size: 1.1em;
@@ -33,7 +34,7 @@
       }
     </style>
   </head>
-<body>
+  <body>
   <!-- Header with Navigation & Language Selector -->
   <header>
     <nav class="nav-container">
@@ -89,25 +90,94 @@
       </div>
     </nav>
   </header>
-  
-  <!-- Attributions Section -->
-  <main>
-    <section id="attributions">
-      <div class="attributions-content">
-        <h2>版权声明</h2>
-        <p>本网站使用的所有图标和图形均通过合法途径获取，并在下方标注了来源信息。</p>
-        <ul>
-          <!--<li><strong>Home</strong>: None</li>-->
-          <!--<li><strong>O mnie</strong>: None</li>-->
-          <!--<li><strong>Projekty</strong>: None</li>-->
-          <li><strong>联系方式"版块素材来源说明</strong>: <a href="https://storyset.com/internet" target="_blank">网络插图由Storyset提供</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+    
+    <!-- Main Content for Projects Page -->
+    <main>
+      <div class="projects-container">
+        <!-- Fixed Sidebar Menu with Pinned and Other Projects -->
+        <aside class="toc">
+          <h3>副项目</h3>
+          <ul class="all-projects">
+            <li><a href="#project1">营销活动</a></li>
+            <li><a href="#project2">声波手电筒</a></li>
 
-  <footer>
+          </ul>
+        </aside>
+        <div class="projects-content">
+
+            <!-- Project 1 -->
+          <section id="project1">
+            <div class="project-text">
+              <h2>家庭农场本地营销活动</h2>  
+              <p>
+                与妹妹合作策划了本地营销活动，通过以下方式推广家庭农场：<br><br>
+                - 设计含二维码的横幅、名片和宣传材料<br>
+                - 创建并初期运营Facebook专页<br>
+                - 开展Facebook定向广告活动，精准触达本地受众<br>
+                - 整合线上线下推广策略<br><br>
+
+                在三年时间内，这些举措使客户基数直接增长了30-40%，同时显著提升了本地品牌在区域的知名度。
+              </p>  
+              <a class="project-link" href="https://www.facebook.com/profile.php?id=100095018736222" target="_blank">
+                Facebook页面
+              </a>
+            </div>
+            <div class="side-project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/Baner.png" alt="Baner">
+                <div class="media-caption"><b>广告横幅</b></div>
+              </div>
+              <div class="media-item">
+                <img src="/assets/images/B_card.png" alt="B_card">
+                <div class="media-caption"><b>名片</b></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="project2">
+            <div class="project-text">
+              <h2>声波手电筒原型 — 盲人导航设备</h2>
+              <p>
+                生物医学小组项目：<br>
+                我们共同设计了一款辅助盲人日常生活的设备原型。
+                “声波手电筒”的工作原理是发射超声波信号，信号反射后返回用户；根据声音强度、返回时间和其他细微感知，用户可以定位障碍物并实现空间导航。
+                <br><br>
+                该设备的运作原理类似于回声定位现象。
+                <br><br>
+                我的主要任务包括设计外壳和电子电路布局。
+              </p>                   
+            </div>
+
+            <div class="project-image-stack project1-stack">
+              <div class="media-item">
+                <img src="/assets/images/Group_photo.png" alt="Group_photo">
+                <div class="media-caption"><b>项目小组</b></div>
+              </div>
+
+              <div class="project-image-stack">
+                <div class="media-item">
+                  <img src="/assets/images/Flashlight.png" alt="Flashlight">
+                  <div class="media-caption"><b>声波手电筒</b></div>
+                </div>
+                <div class="media-item">
+                  <video autoplay loop muted playsinline width="100%">
+                    <source src="/assets/images/Flash_assembly.mp4" type="video/mp4">
+                    <b>您的浏览器不支持视频播放。</b>
+                  </video>
+                  <div class="media-caption"><b>初代原型设计图</b></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+    
+    <div class="spacer"></div>
+    
+    <footer>
       <p>© 2025 Sebastian Borukalo。版权所有。<a href="attributions.html" class="attribution-link">版权声明</a></p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
