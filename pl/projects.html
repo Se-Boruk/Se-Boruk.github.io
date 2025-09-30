@@ -98,12 +98,12 @@
         <aside class="toc">
           <h3>Projekty</h3>
           <ul class="all-projects">
-            <li><a href="#project1">Praca inż.</a></li>
+            <li><a href="#project1">Artykuł naukowy</a></li>
             <li><a href="#project11">CycleGan DeepFake</a></li>
-            <li><a href="#project2">CornHub DataSet</a></li>
+            <li><a href="#project111">Limitless_chat</a></li>
             <li><a href="#project3">BobRoss ProGAN</a></li>
+            <li><a href="#project2">CornHub DataSet</a></li>
             <li><a href="#project4">NeuroUtils</a></li>
-            <li><a href="#project5">Cifar10 Human accuracy</a></li>
           </ul>
         </aside>
         <div class="projects-content">
@@ -112,20 +112,19 @@
             <div class="project-text">
               <h2>Ocena artrozy stawu biodrowego na podstawie analizy obrazów RTG sąsiednich kości</h2>
               <p>
-                Praca inżynierska, w której celem było zbadanie korelacji między zmianami kości sąsiadujących ze stawem biodrowym a jego degeneracją.
-                Podczas pracy stosowałem różne techniki normalizacji danych, dopasowania rozmiaru obrazów, sieci konwolucyjne oraz techniki uczenia głębokiego, w celu uzyskania jak najlepszych wyników klasyfikacji artrozy.<br><br>
-                Udało mi się wykazać, że występuje korelacja pomiędzy badanymi obszarami, a artrozą co otwiera pole do wnioskowania o niej bez użycia bezpośrednich zdjęć.<br><br>
-                Artykuł naukowy napisany na podstawie tej pracy, został zrecenzowany i czeka na prezentację na konferencji biomedycznej.
+                Artykuł naukowy, który powstał na podstawie mojej praca inżynierskiej, którego celem było zbadanie korelacji między zmianami kości sąsiadujących ze stawem biodrowym a jego degeneracją.<br><br>
+                Podczas badań stosowałem różne techniki normalizacji danych, dopasowania rozmiaru obrazów, sieci konwolucyjne oraz techniki uczenia głębokiego, w celu uzyskania jak najlepszych wyników klasyfikacji artrozy.<br><br>
+                Udało mi się wykazać, że występuje korelacja pomiędzy badanymi obszarami, a artrozą co otwiera pole do wnioskowania o niej bez użycia bezpośrednich zdjęć.
               </p>
             </div>
-            <div class="project-image-stack project1-stack">
+            <div class="project-image-stack project1-stack111">
               <div class="media-item top-image">
-                <img src="/assets/images/PI_Miednica.png" alt="Badane obszary">
+                <img src="/assets/images/PI_Miednica.png" alt="Studied regions">
                 <div class="media-caption"><b>Badane obszary</b></div>
               </div>
               <div class="media-item">
-                <img src="/assets/images/PI_schemat_sieci.png" alt="Siec neuronowa">
-                <div class="media-caption"><b>Schemat zaproponowanej sieci</b></div>
+                <img src="/assets/images/Temp_conference_photo.png" alt="Conf_photo">
+                <div class="media-caption"><b>Prezentacja artykułu na konferencji</b></div>
               </div>
             </div>
           </section>
@@ -153,6 +152,66 @@
               </div>
             </div>
           </section>
+
+          <!-- Project 111 -->
+          <section id="project111">
+            <div class="project-text">
+              <h2>Limitless_Chat</h2>
+              <p>
+              Środowisko, które pozawala na korzystanie ze wszystkich benefitów LLM-ów bez obaw o prywatność czy odmowę odpowiedzi. Zawiera GUI, RAG (zarówno online jak i lokalny używający bazy wektorowej). 
+              Pozwala też na bezpieczne wyszukiwanie treści przez RAG online, jeśli zależy nam na większej anonimowości. Używane modele są optymalizowane za pomocą technik kwantyzacji oraz półprecyzyjnych liczb fp16, tak aby mogły zostać uruchomione lokalnie.<br><br>
+              Główne założenia Limitless_Chat:<br>
+              - Polityka braku odmowy<br>
+              - Bezpieczne wyszukiwanie<br>
+              - Lokalność<br>
+              - Optymalizacja<br><br>
+              Obecnie na etapie rozwoju / prototypowania.
+              </p>    
+              <a class="project-link" href="https://github.com/Se-Boruk/Limitless_chat" target="_blank">
+                GitHub Link
+              </a>          
+            </div>
+            <div class="project-image-stack1 project1-stack111">
+              <div class="media-item">
+                <img src="/assets/images/Chat_preview.png" alt="Neural network">
+                <div class="media-caption"><b>Widok GUI</b></div>
+              </div>
+              <div class="media-item top-image">
+                <img src="/assets/images/Limitless_logo.png" alt="Studied regions">
+                <div class="media-caption"><b>Logo</b></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Project 3 -->
+          <section id="project3">
+            <div class="project-text">
+              <h2>BobRoss ProGAN</h2>
+              <p>
+                Generacyjna sieć neuronowa tworząca obrazy w stylu Boba Rossa.
+                Oparta jest o metodę Progressive-GAN, tworzącej obrazy o stopniowo coraz większej rozdzielczości.<br>
+                Sieć została zaimplementowana od podstaw oraz została wyszkolona na zestawie 5 tysięcy obrazów, namalowanych w stylu artysty.
+              </p>
+              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
+                GitHub Link
+              </a>
+            </div>
+            <div class="project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
+                <div class="media-caption"><b>Siatka wygenerowanych obrazów</b></div>
+              </div>
+              <div class="media-item">
+                <video autoplay loop muted playsinline width="100%">
+                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
+                  <b>Twoja przęglądarka nie obsługuje tego rodzaju wideo</b>
+                </video>
+                <div class="media-caption"><b>Proces uczenia sieci</b></div>
+              </div>
+            </div>
+          </section>
+
+
           <!-- Project 2 -->
           <section id="project2">
             <div class="project-text">
@@ -181,40 +240,14 @@
               </div>
             </div>
           </section>
-          <!-- Project 3 -->
-          <section id="project3">
-            <div class="project-text">
-              <h2>BobRoss ProGAN</h2>
-              <p>
-                Generacyjna sieć neuronowa tworząca obrazy w stylu Boba Rossa.
-                Oparta jest o metodę Progressive-GAN, tworzącej obrazy o stopniowo coraz większej rozdzielczości.
-                Sieć została zaimplementowana od podstaw oraz została wyszkolona na zestawie 5 tysięcy obrazów, namalowanych w stylu artysty.
-              </p>
-              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
-                GitHub Link
-              </a>
-            </div>
-            <div class="project-image-stack">
-              <div class="media-item">
-                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
-                <div class="media-caption"><b>Siatka wygenerowanych obrazów</b></div>
-              </div>
-              <div class="media-item">
-                <video autoplay loop muted playsinline width="100%">
-                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
-                  <b>Twoja przęglądarka nie obsługuje tego rodzaju wideo</b>
-                </video>
-                <div class="media-caption"><b>Proces uczenia sieci</b></div>
-              </div>
-            </div>
-          </section>
 
           <!-- Project 4 -->
           <section id="project4">
             <div class="project-text">
               <h2>NeuroUtils</h2>
               <p>
-                Biblioteka programistyczna skupiona na automatyzacji zadań i zarządzaniem projektami, związanych z wizją komputerową i uczeniem głębokim.
+                Biblioteka programistyczna skupiona na automatyzacji zadań i zarządzaniem projektami, związanych z wizją komputerową i uczeniem głębokim.<br><br>
+                Została użyta jako baza do zarządzania badaniami pt. "Assessment of hip joint arthrosis based on the X-ray images of adjacent bones" w ramach przygotowań artykułu naukowego oraz pracy inż.
               </p>
               <a class="project-link" href="https://github.com/Se-Boruk/NeuroUtils" target="_blank">
                 GitHub Link
@@ -232,29 +265,6 @@
             </div>
           </section>
 
-          <!-- Project 5 -->
-          <section id="project5">
-            <div class="project-text">
-              <h2>Cifar10 - human accuracy</h2>
-              <p>
-                Projekt skupiony na wykorzystaniu w praktyce biblioteki NeuroUtils w celu zarządzania projektem.<br><br>
-                Obejmował zaimplementowania własnej architektury sieci konwolucyjnej wraz z technikami optymalizacji uczenia, w celu osiągnięcia dokładności 94%, czyli dokładnie takiej jaką osiąga przeciętnie człowiek na zbiorze Cifar10.
-              </p>
-              <a class="project-link" href="https://github.com/Se-Boruk/Cifar10_Classification" target="_blank">
-                GitHub Link
-              </a>
-            </div>
-            <div class="project4-image-stack">
-              <div class="media-item">
-                <img src="/assets/images/Cifar_conf.png" alt="Conf_matrix">
-                <div class="media-caption"><b>Macierz pomyłek modelu</b></div>
-              </div>
-              <div class="media-item">
-                <img src="/assets/images/Cifar_model.png" alt="Model_pdf">
-                <div class="media-caption"><b>Podsumowanie modelu</b></div>
-              </div>
-            </div>
-          </section>
 
         </div>
       </div>

@@ -601,6 +601,49 @@ footer .attribution-link {
   text-decoration: underline;
 }
 
+
+/* Right Column: Inline (Side-by-Side) Images */
+.project-image-stack1 {
+  display: flex;
+  flex-direction: row;    /* Maintain horizontal layout */
+  gap: 2rem;              /* Space between images */
+  justify-content: space-between; /* Distribute items with space between */
+  align-items: flex-start; /* Align items to the top */
+}
+.project-image-stack1 .media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image-stack1 .top-image {
+  height: auto !important;  /* shrink to fit its content */
+}
+.project-image-stack1 .top-image img {
+  height: 150px;  /* your smaller size */
+  width: auto;
+}
+
+.project-image-stack1 img {
+  height: 250px;              /* Fixed height */
+  width: auto;                /* Width adjusts to keep aspect ratio */
+  border-radius: 5px;
+  object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.project-image-stack1 video {
+  height: 200px;              /* Fixed height */
+  width: auto;                /* Width adjusts to keep aspect ratio */
+  border-radius: 5px;
+  object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
 /* Right Column: Inline (Side-by-Side) Images */
 .project-image-stack {
   display: flex;
@@ -623,6 +666,8 @@ footer .attribution-link {
   object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 .project-image-stack video {
   height: 200px;              /* Fixed height */
   width: auto;                /* Width adjusts to keep aspect ratio */
@@ -630,6 +675,8 @@ footer .attribution-link {
   object-fit: contain;        /* Keeps aspect ratio inside the box without cropping */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Right Column: Inline (Side-by-Side) Images */
 .side-project-image-stack {
@@ -700,15 +747,6 @@ footer .attribution-link {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*Images on top in first project */
 .project1-stack {
   display: flex;
@@ -742,6 +780,40 @@ footer .attribution-link {
 }
 
 
+/*Images on top in first project */
+.project1-stack111 {
+  display: flex;
+  flex-direction: column;  /* Stack the images vertically */
+  gap: 0rem;               /* Space between the images */
+  justify-content: flex-start; /* Align images at the top */
+  align-items: flex-end;   /* Align both images to the right side */
+}
+
+.project1-stack111 .media-item {
+  width: auto;             /* Width is automatic based on height */
+  height: 350px;           /* Set a fixed height for both images */
+  display: flex;
+  justify-content: center;
+}
+
+.project1-stack111 img {
+  height: 75%;            /* Keep the height consistent */
+  width: auto;             /* Maintain aspect ratio */
+  object-fit: contain;     /* Ensure the aspect ratio is preserved */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project1-stack111 .media-item.top-image {
+  align-self: flex-end;    /* Align the top image to the right */
+}
+
+.project-text {
+  flex: 1;                 /* Allow text to take remaining space */
+}
+
+
+
 
 
 /* Caption styling */
@@ -754,6 +826,14 @@ footer .attribution-link {
 /* Responsive Styling for Projects Page */
 @media (max-width: 768px) {
   .project-image-stack {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive Styling for Projects Page */
+@media (max-width: 768px) {
+  .project-image-stack1 {
     flex-direction: column;
     align-items: center;
   }

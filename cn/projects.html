@@ -98,12 +98,12 @@
         <aside class="toc">
           <h3>行业项目</h3>
           <ul class="all-projects">
-            <li><a href="#project1">工程学士毕业设计</a></li>
+            <li><a href="#project1">科学论文</a></li>
             <li><a href="#project11">CycleGAN 深度伪造</a></li>
-            <li><a href="#project2">CornHub数据集</a></li>
+            <li><a href="#project111">Limitless_chat</a></li>
             <li><a href="#project3">BobRoss ProGAN</a></li>
+            <li><a href="#project2">CornHub数据集</a></li>
             <li><a href="#project4">NeuroUtils</a></li>
-            <li><a href="#project5">Cifar10人类识别准确率</a></li>
           </ul>
         </aside>
         <div class="projects-content">
@@ -112,23 +112,24 @@
             <div class="project-text">
               <h2>基于髋关节邻近骨骼X光图像的关节退化评估</h2>
               <p>
-                本工程学士毕业设计旨在研究髋关节周围骨骼的结构性变化与关节退化之间的相关性。
+                本学术论文源自我的工程学士毕业设计，主要研究髋关节周围骨骼的结构性变化与关节退化之间的相关性。<br><br>
                 项目中，我应用了多种数据归一化方法、图像缩放技术、卷积神经网络（CNN）及深度学习方案，以提高关节退化分类的准确性。<br><br>
-                最终，我成功验证了目标骨骼区域与髋关节骨关节炎的相关性，为不依赖关节直接成像的诊断方法提供了新思路。<br><br>
-                本学位论文衍生的学术论文已通过同行评议，即将在生物医学学术会议上宣读。
+                最终，我成功验证了目标骨骼区域与髋关节骨关节炎的相关性，为不依赖关节直接成像的诊断方法提供了新途径。
               </p>
             </div>
-            <div class="project-image-stack project1-stack">
+            <div class="project-image-stack project1-stack111">
               <div class="media-item top-image">
-                <img src="/assets/images/PI_Miednica.png" alt="Badane obszary">
+                <img src="/assets/images/PI_Miednica.png" alt="Studied regions">
                 <div class="media-caption"><b>研究区域</b></div>
               </div>
               <div class="media-item">
-                <img src="/assets/images/PI_schemat_sieci.png" alt="Siec neuronowa">
-                <div class="media-caption"><b>神经网络结构图</b></div>
+                <img src="/assets/images/Temp_conference_photo.png" alt="Conf_photo">
+                <div class="media-caption"><b>会议论文宣讲</b></div>
               </div>
             </div>
           </section>
+
+
           <!-- Project 11 -->
           <section id="project11">
             <div class="project-text">
@@ -153,6 +154,67 @@
               </div>
             </div>
           </section>
+
+          <!-- Project 111 -->
+          <section id="project111">
+            <div class="project-text">
+              <h2>Limitless_Chat</h2>
+              <p>
+              个让您享受大语言模型全部优势，而无需担心隐私或回答受限的环境。该系统包含图形界面以及结合在线与本地搜索的RAG（检索增强生成）框架（使用向量数据库）。
+              同时支持安全搜索功能，通过在线RAG增强匿名性。模型通过量化和半精度技术进行优化，可在本地设备上高效运行。<br><br>
+              Limitless_chat 主要特点：<br>
+              - 无拒绝策略<br>
+              - 安全搜索<br>
+              - 本地运行<br>
+              - 性能优化<br><br>
+              目前处于开发中 / 原型阶段。
+              </p>    
+              <a class="project-link" href="https://github.com/Se-Boruk/Limitless_chat" target="_blank">
+                GitHub 仓库
+              </a>          
+            </div>
+            <div class="project-image-stack1 project1-stack111">
+              <div class="media-item">
+                <img src="/assets/images/Chat_preview.png" alt="Neural network">
+                <div class="media-caption"><b>聊天界面预览</b></div>
+              </div>
+              <div class="media-item top-image">
+                <img src="/assets/images/Limitless_logo.png" alt="Studied regions">
+                <div class="media-caption"><b>标志</b></div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+          <!-- Project 3 -->
+          <section id="project3">
+            <div class="project-text">
+              <h2>BobRoss ProGAN</h2>
+              <p>
+                生成式神经网络：Bob Ross风格绘画生成器
+                本模型基于渐进式GAN架构（Progressive-GAN），通过逐级提升分辨率生成图像。网络完全从零实现，并在5,000幅Bob Ross风格画作上训练完成。
+              </p>
+              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
+                GitHub 仓库
+              </a>
+            </div>
+            <div class="project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
+                <div class="media-caption"><b>生成画作网格</b></div>
+              </div>
+              <div class="media-item">
+                <video autoplay loop muted playsinline width="100%">
+                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
+                  <b>您的浏览器不支持视频播放。</b>
+                </video>
+                <div class="media-caption"><b>网络学习过程</b></div>
+              </div>
+            </div>
+          </section>
+
           <!-- Project 2 -->
           <section id="project2">
             <div class="project-text">
@@ -181,39 +243,14 @@
               </div>
             </div>
           </section>
-          <!-- Project 3 -->
-          <section id="project3">
-            <div class="project-text">
-              <h2>BobRoss ProGAN</h2>
-              <p>
-                生成式神经网络：Bob Ross风格绘画生成器
-                本模型基于渐进式GAN架构（Progressive-GAN），通过逐级提升分辨率生成图像。网络完全从零实现，并在5,000幅Bob Ross风格画作上训练完成。
-              </p>
-              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
-                GitHub 仓库
-              </a>
-            </div>
-            <div class="project-image-stack">
-              <div class="media-item">
-                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
-                <div class="media-caption"><b>生成画作网格</b></div>
-              </div>
-              <div class="media-item">
-                <video autoplay loop muted playsinline width="100%">
-                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
-                  <b>您的浏览器不支持视频播放。</b>
-                </video>
-                <div class="media-caption"><b>网络学习过程</b></div>
-              </div>
-            </div>
-          </section>
 
           <!-- Project 4 -->
           <section id="project4">
             <div class="project-text">
               <h2>NeuroUtils</h2>
               <p>
-                专注于计算机视觉与深度学习任务自动化及项目管理的编程库。
+                本编程库专注于计算机视觉与深度学习领域的任务自动化与项目管理。<br><br>
+                曾作为《基于髋关节邻近骨骼X光图像的关节退化评估》学术论文与工程学士毕业设计的研究管理基础平台。
               </p>
               <a class="project-link" href="https://github.com/Se-Boruk/NeuroUtils" target="_blank">
                 GitHub 仓库
@@ -231,29 +268,6 @@
             </div>
           </section>
 
-          <!-- Project 5 -->
-          <section id="project5">
-            <div class="project-text">
-              <h2>Cifar10人类识别准确率</h2>
-              <p>
-                项目专注于在实践中应用NeuroUtils库进行项目管理。<br><br>
-                内容包括实现自定义卷积神经网络架构及训练优化技术，最终在Cifar10数据集上达到94%的准确率，与人类平均识别水平相当。
-              </p>
-              <a class="project-link" href="https://github.com/Se-Boruk/Cifar10_Classification" target="_blank">
-                GitHub 仓库
-              </a>
-            </div>
-            <div class="project4-image-stack">
-              <div class="media-item">
-                <img src="/assets/images/Cifar_conf.png" alt="Conf_matrix">
-                <div class="media-caption"><b>模型混淆矩阵</b></div>
-              </div>
-              <div class="media-item">
-                <img src="/assets/images/Cifar_model.png" alt="Model_pdf">
-                <div class="media-caption"><b>模型摘要</b></div>
-              </div>
-            </div>
-          </section>
 
         </div>
       </div>

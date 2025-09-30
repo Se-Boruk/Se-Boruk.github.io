@@ -98,12 +98,12 @@
         <aside class="toc">
           <h3>Projects</h3>
           <ul class="all-projects">
-            <li><a href="#project1">Engineering thesis</a></li>
+            <li><a href="#project1">Scientific paper</a></li>
             <li><a href="#project11">CycleGan DeepFake</a></li>
-            <li><a href="#project2">CornHub DataSet</a></li>
+            <li><a href="#project111">Limitless_chat</a></li>
             <li><a href="#project3">BobRoss ProGAN</a></li>
+            <li><a href="#project2">CornHub DataSet</a></li>
             <li><a href="#project4">NeuroUtils</a></li>
-            <li><a href="#project5">Cifar10 Human accuracy</a></li>
           </ul>
         </aside>
         <div class="projects-content">
@@ -112,23 +112,24 @@
             <div class="project-text">
               <h2>Assessment of hip joint arthrosis based on the X-ray images of adjacent bones</h2>
               <p>
-                Engineering thesis focused on investigating the correlation between structural changes in bones surrounding the hip joint and the joint's degeneration.
+                Scientific paper originated from my engineering thesis, focused on investigating the correlation between structural changes in bones surrounding the hip joint and the joint's degeneration.<br><br>
                 Throughout the project, I applied various data normalization methods, image resizing techniques, convolutional neural networks (CNNs), and deep learning approaches to improve the accuracy of arthrosis classification.<br><br>
-                Ultimately, I was able to show the correlation between the studied bone regions and hip osteoarthritis, which opens the door to diagnosing the condition without relying on direct imaging of the joint itself.<br><br>
-                A scientific paper based on this thesis has been peer-reviewed and is awaiting presentation at a biomedical conference.
+                Ultimately, I was able to show the correlation between the studied bone regions and hip osteoarthritis, which opens the door to diagnosing the condition without relying on direct imaging of the joint itself.
               </p>              
             </div>
-            <div class="project-image-stack project1-stack">
+            <div class="project-image-stack project1-stack111">
               <div class="media-item top-image">
                 <img src="/assets/images/PI_Miednica.png" alt="Studied regions">
                 <div class="media-caption"><b>Studied regions</b></div>
               </div>
               <div class="media-item">
-                <img src="/assets/images/PI_schemat_sieci.png" alt="Neural network">
-                <div class="media-caption"><b>Scheme of proposed neural network</b></div>
+                <img src="/assets/images/Temp_conference_photo.png" alt="Conf_photo">
+                <div class="media-caption"><b>Paper presentation at conference</b></div>
               </div>
             </div>
+
           </section>
+
           <!-- Project 11 -->
           <section id="project11">
             <div class="project-text">
@@ -153,6 +154,66 @@
               </div>
             </div>
           </section>
+
+          <!-- Project 111 -->
+          <section id="project111">
+            <div class="project-text">
+              <h2>Limitless_Chat</h2>
+              <p>
+              Environment that allows you to use all the benefits of LLMs without concerns about privacy or answer refusal. It involves GUI, RAG with both online and local search (using vector database).
+              It allows also for safe search which uses online RAG for improved anonymity. Models are optimized to run on local machine by quantization and half-precision techniques.<br><br>
+              Limitless_chat main points:<br>
+              - No refusal policy<br>
+              - Safe search<br>
+              - Local<br>
+              - Optimization<br><br>
+              Currently in development / prototype state.
+              </p>    
+              <a class="project-link" href="https://github.com/Se-Boruk/Limitless_chat" target="_blank">
+                GitHub Link
+              </a>          
+            </div>
+            <div class="project-image-stack1 project1-stack111">
+              <div class="media-item">
+                <img src="/assets/images/Chat_preview.png" alt="Neural network">
+                <div class="media-caption"><b>Chat GUI preview</b></div>
+              </div>
+              <div class="media-item top-image">
+                <img src="/assets/images/Limitless_logo.png" alt="Studied regions">
+                <div class="media-caption"><b>Logo</b></div>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Project 3 -->
+          <section id="project3">
+            <div class="project-text">
+              <h2>BobRoss ProGAN</h2>
+              <p>
+                Generative neural network designed to create paintings in the style of Bob Ross.
+                It is based on the Progressive-GAN architecture, which generates images by gradually increasing their resolution.<br>
+                The network was implemented from the scratch and was trained on the dataset of 5000 images, painted in the artist's style.
+              </p>
+              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
+                GitHub Link
+              </a>
+            </div>
+            <div class="project-image-stack">
+              <div class="media-item">
+                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
+                <div class="media-caption"><b>Generated paintings grid</b></div>
+              </div>
+              <div class="media-item">
+                <video autoplay loop muted playsinline width="100%">
+                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
+                  <b>Your browser does not support the video tag.</b>
+                </video>
+                <div class="media-caption"><b>Network learning process</b></div>
+              </div>
+            </div>
+          </section>
+
           <!-- Project 2 -->
           <section id="project2">
             <div class="project-text">
@@ -181,40 +242,14 @@
               </div>
             </div>
           </section>
-          <!-- Project 3 -->
-          <section id="project3">
-            <div class="project-text">
-              <h2>BobRoss ProGAN</h2>
-              <p>
-                Generative neural network designed to create paintings in the style of Bob Ross.
-                It is based on the Progressive-GAN architecture, which generates images by gradually increasing their resolution.
-                The network was implemented from the scratch and was trained on the dataset of 5000 images, painted in the artist's style.
-              </p>
-              <a class="project-link" href="https://github.com/Se-Boruk/Bob-Ross-Progressive-Gan" target="_blank">
-                GitHub Link
-              </a>
-            </div>
-            <div class="project-image-stack">
-              <div class="media-item">
-                <img src="/assets/images/ProGan_images.png" alt="Siatka wygenerowanych obrazów">
-                <div class="media-caption"><b>Generated paintings grid</b></div>
-              </div>
-              <div class="media-item">
-                <video autoplay loop muted playsinline width="100%">
-                  <source src="/assets/images/ProGan_training.mp4"" type="video/mp4">
-                  <b>Your browser does not support the video tag.</b>
-                </video>
-                <div class="media-caption"><b>Network learning process</b></div>
-              </div>
-            </div>
-          </section>
 
           <!-- Project 4 -->
           <section id="project4">
             <div class="project-text">
               <h2>NeuroUtils</h2>
               <p>
-                Programming library focused on automating tasks and managing projects related to computer vision and deep learning.
+                Programming library focused on automating tasks and managing projects related to computer vision and deep learning. <br><br>
+                It was used as base for managing research in the "Assessment of hip joint arthrosis based on the X-ray images of adjacent bones" paper and engineering thesis.
               </p>
               <a class="project-link" href="https://github.com/Se-Boruk/NeuroUtils" target="_blank">
                 GitHub Link
@@ -231,31 +266,6 @@
               </div>
             </div>
           </section>
-
-          <!-- Project 5 -->
-          <section id="project5">
-            <div class="project-text">
-              <h2>Cifar10 - human accuracy</h2>
-              <p>
-                Project focused on utilizing in practice the NeuroUtils library for project management.<br><br>
-                It involved implementing a custom convolutional neural network (CNN) architecture and applying training optimization techniques to achieve 94% accuracy — matching the average human-level performance on the CIFAR-10 dataset.
-              </p>
-              <a class="project-link" href="https://github.com/Se-Boruk/Cifar10_Classification" target="_blank">
-                GitHub Link
-              </a>
-            </div>
-            <div class="project4-image-stack">
-              <div class="media-item">
-                <img src="/assets/images/Cifar_conf.png" alt="Conf_matrix">
-                <div class="media-caption"><b>Model's confussion matrix</b></div>
-              </div>
-              <div class="media-item">
-                <img src="/assets/images/Cifar_model.png" alt="Model_pdf">
-                <div class="media-caption"><b>Model summary</b></div>
-              </div>
-            </div>
-          </section>
-
         </div>
       </div>
     </main>
